@@ -12,9 +12,10 @@ use crossterm::{
 
 use tui::{
     backend::CrosstermBackend,
-    text::{Text},
+    layout::Rect,
+    text::{Span, Spans, Text},
     Terminal,
-    widgets::{Block, Borders, Paragraph, Wrap},
+    widgets::{Block, Borders, Paragraph},
 };
 
 fn main() {
@@ -34,6 +35,14 @@ fn main() {
             exit(254);
         }
     };
+    let addresses: Vec<&str> = content.split("\r\n\r\n").collect();
+    let headers: Vec<Spans> = addresses.iter().map(|address| {
+        Spans::from(
+            Span::raw(
+                address.split("\r\n").nth(0).unwrap().to_string()
+            )
+        )
+    }).collect();
 
     enable_raw_mode().unwrap(); // prevent key presses reaching stdout
     let stdout = stdout();
@@ -43,11 +52,19 @@ fn main() {
     terminal.draw(|f| {
         let size = f.size();
         let block = Block::default()
-            .title(path)
+            .title(format!(" {} ", path))
             .borders(Borders::ALL);
-        let text = Text::from(&content[..]);
-        let paragraph = Paragraph::new(text).block(block).wrap(Wrap { trim: true });
-        f.render_widget(paragraph, size);
+        let content_box = Paragraph::new(Text::from(headers));
+        let counter = format!(" #{} ", addresses.len());
+        let counter_len = counter.len() as u16;
+        let counter_box = Paragraph::new(Text::from(vec![Spans::from(Span::raw(counter))]));
+
+        let inner_size = Rect::new(size.x + 2, size.y + 1, size.width - 3, size.height - 2);
+        let counter_size = Rect::new(size.x + size.width - counter_len - 2, size.y, counter_len, 1);
+
+        f.render_widget(block, size);
+        f.render_widget(content_box, inner_size);
+        f.render_widget(counter_box, counter_size);
     }).unwrap();
 
     loop {
