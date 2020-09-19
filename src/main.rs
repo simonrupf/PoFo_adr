@@ -1,10 +1,21 @@
-use std::env::args;
-use std::fs;
-use std::process::exit;
+use std::{
+    env::args,
+    fs,
+    io::stdout,
+    process::exit,
+};
 
-extern crate pancurses;
-use pancurses::{initscr, endwin, Input, noecho, Window};
-use Input::*;
+use crossterm::{
+    event::{self, Event, KeyCode},
+    terminal::{disable_raw_mode, enable_raw_mode},
+};
+
+use tui::{
+    backend::CrosstermBackend,
+    text::{Text},
+    Terminal,
+    widgets::{Block, Borders, Paragraph, Wrap},
+};
 
 fn main() {
     let path = match args().nth(1) {
@@ -23,49 +34,30 @@ fn main() {
             exit(254);
         }
     };
-    println!("File {}:", path);
-    println!("{}", content);
 
-    let window = initscr();
-    window.printw("File {} - Press Escape to quit\n");
-    window.addstr(content);
-    window.draw_box(0, 0);
-    window.refresh();
-    window.keypad(true);
-    noecho();
+    enable_raw_mode().unwrap(); // prevent key presses reaching stdout
+    let stdout = stdout();
+    let backend = CrosstermBackend::new(stdout);
+    let mut terminal = Terminal::new(backend).unwrap();
+    terminal.clear().unwrap();
+    terminal.draw(|f| {
+        let size = f.size();
+        let block = Block::default()
+            .title(path)
+            .borders(Borders::ALL);
+        let text = Text::from(&content[..]);
+        let paragraph = Paragraph::new(text).block(block).wrap(Wrap { trim: true });
+        f.render_widget(paragraph, size);
+    }).unwrap();
+
     loop {
-        match window.getch() {
-            Some(key) if [KeyUp, KeyDown, KeyLeft, KeyRight].contains(&key) => handle_cursor_key(window, key),
-            Some(Character('\x1b')) => break, // escape key
-            Some(input) => { window.addstr(&format!("{:?}", input)); },
-            None => ()
+        if let Event::Key(key) = event::read().unwrap() {
+            if key.code == KeyCode::Esc {
+                break;
+            }
         }
     }
-    endwin();
-}
 
-fn handle_cursor_key(&window: Window, key: Input) {
-    let x = window.get_cur_x();
-    let y = window.get_cur_y();
-    let mut updated_x = x;
-    let mut updated_y = y;
-
-    match key {
-        KeyUp => {
-            updated_y = y - 1;
-        },
-        KeyDown => {
-            updated_y = y + 1;
-        },
-        KeyLeft => {
-            updated_x = x - 1;
-        },
-        KeyRight => {
-            updated_x = x + 1;
-        },
-        _ => ()
-    }
-    window.mvwin(updated_y, updated_x);
-    window.mv(updated_y, updated_x);
-    window.refresh();
+    // cleanup
+    disable_raw_mode().unwrap();
 }
