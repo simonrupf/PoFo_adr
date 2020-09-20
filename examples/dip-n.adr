@@ -1,0 +1,172 @@
+aaa>NOTES
+1 header line starts w/page #
+  & supplier code (see next card)
+2 contents on p04+p05, see headers
+3 last line has availablity & price
+  (IN UK POUNDS [œ])
+  I = Immediate Availablity
+  œA = Price On Application (??)
+
+aaa>Supplier Codes
+vA = Autobyte
+vB = Becker & Partner GmbH
+vC = Computer Friends Inc
+vCM = Createam
+vCR = Cristie
+vD = DIP (Distributed Information Processing) Ltd
+vDA = Data Analysa Systems Ltd
+vF = Financial Systems S/W (UK) Ltd
+vFD = Foundation for Communication for the Disabled
+vI = IBM Elektronic GmbH
+vJ = John L Masterman Computer Consultants
+vM = Mint Advanced Computer Solutions
+vMB = Micro TecHnology b v
+vMD = memo-Datentechnk
+vMI = Millrim Ltd
+vMS = Microprocessor Designs
+vMT = Modulec Technology
+vP = Peter Davidson Consultancy
+vPB = Peter Baron, Sigma Press
+vS = Sunrise Industries
+vSE = Sectel
+vSI = Siskin Electronics
+vT = Total Computer Systems Ltd
+vTC = Trend Computers & S/W
+vO = Olympic Computer Systems
+
+aa>abbreviations
+to save space:
+#s used where possible
+unnecessary spaces, ending periods & LF stripped
+& = and
+acct = account
+admin = administration
+b/t = between
+calc = calculation
+cmd = command
+comm = communication
+comp = computer
+d/l = download
+DB = database
+DT = desktop
+eg = for example
+h/w = hardware
+m/c = memory cards
+mgt = management
+PD = Product Directory
+PF = (DIP) Pocket PC/(Atari) Portfolio
+pgm = program
+pkg = package
+pkt = pocket
+s/ = should
+s/w = software
+std = standard
+trfr = transfer
+w/ = with
+
+p01 The PF PD
+What there is & where to get it
+
+p03 Dear PF User,
+Welcome to the 1st issue of the DIP PD-the end user
+& dealer publication that details the products available for the PF
+The PF has been marketed worldwide for
+18 months & there are now many 10s of 1000s in circulation
+The aim of the PD is to bring together all the available
+h/w & s/w for the machince, & to offer, through DIP, a
+central source of supply. The Directory will be published regularly
+& distributed to all dealers & known end users of the PF
+S/you find any applications which are relevant to your needs
+you can obtain further info from DIP Ltd
+I hope you find the PD useful & that it helps you to
+get the most out of your PF. S/you have any suggestions
+or comments regarding the PD,/any issue connected
+w/the PF, then please do not hesitate to contact me,/any
+of our technical/sales staff at ihe address below
+Yours faithfully,
+(signed)
+Oliver Tucker
+GM,DIP Systems
+DIP Ltd,
+32 Frederick Sanger Road
+Surrey Research Park
+Guildford
+Surrey
+GU2 5BR
+Tel: +44 (0483) 301555
+Fax: +44 (0483) 301434
+
+p04 Contents-Software
+Page>Pkg
+ 7>Pkt Sales Force
+ 8>Timebase
+ 9>Sales Mgt Systems
+10>Protime
+11>Timekeeper
+12>Chequewriter
+13>Linkscard
+14>Universal Yield Calculator
+15>Stocks
+16>Stocks & Shares
+17>POKETLease
+18>Finance Card
+19>sp-ASK
+20>Electron TE5
+21>Heatcalc
+22/23>Cypher Series
+24>Dipcomm/Dipkey
+25>Pbase
+26>Terminal+
+27>Science Card
+28>Utilities Card
+29>PC Application s/w
+   File Mgr Card
+30>Pkt Mac s/w
+   Pkt Comms
+31>Message Mover
+32>Pgmr's Guide
+   PF Companion Book
+   Training Guides/Courses
+
+p05 Contents -Hardware
+Page>Pkg>Author
+34>M/cs
+   Memory Modules
+35>Internal Memory Expansion
+   Greater Capacity PF
+36>Ruggedised PF
+37>PC Card Drive
+38>File Trfr Cable
+   Trans-Drive
+39>memo-RAM-Card-Station
+40>Retriever
+41>Pkt Modem
+42>PF Modem
+   Radio Modems
+43>Portalog
+44>Palmdec
+45>Memory Expander Plus
+   PF Carrying Case
+46>Parallel Peripheral
+   Serial Peripheral
+47>Portlink
+48>Enquiry Page
+
+p48 vD Need further info?
+S/you require any info on any products in the PD
+please contact the Sales Dept at:
+ DIP Systems
+ 32 Frederick Sanger Road
+ Surrey Research Park
+ Guildford
+ GU2 5XN
+ Tel: (0483) 301555
+ Fax: (0483) 301434
+Do you want your application incl'd?
+If your Company has a development for the PF & you
+would like us to include it in future editions of the PD,
+please contact Chaz Brooks at the above address
+Reserve your copy
+To ensure you get your free copy of the PD please
+return this form to DIP at the above address
+

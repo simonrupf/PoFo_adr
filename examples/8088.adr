@@ -1,0 +1,540 @@
+AAA 	 ASCII adjust for add
+none
+
+AAD 	 ASCII adjust for divide
+none
+
+AAM 	 ASCII adjust for multiply
+none
+
+AAS 	 ASCII adjust for subtract
+none
+
+ADC 	 add with carry
+reg/mem, reg
+reg, reg/mem
+reg/mem, immed
+
+ADD 	 add
+reg/mem, reg
+reg, reg/mem
+reg/mem, immed
+
+AND 	 and
+reg/mem, reg
+reg, reg/mem
+reg/mem, immed
+
+CALL 	 call
+near 	 direct within segment
+immed (offset), immed (segment) 	 direct intersegment
+reg/mem 	 indirect within segment (16)
+mem 	 indirect intersegment (32)
+
+CBW 	 convert byte to word
+none
+
+CLC 	 clear carry
+none
+
+CLD 	 clear direction
+none
+
+CLI 	 clear interrupt
+none
+
+CMC 	 clear complement carry
+none
+
+CMPSB 	 compare string byte
+none
+
+CMPSW 	 compare string word
+none
+
+CMP 	 compare
+reg/mem, reg
+reg, reg/mem
+reg/mem, immed
+
+CWD 	 convert word to double word
+none
+
+DAA 	 decimal adjust for add
+none
+
+DAS 	 decimal adjust for subtract
+none
+
+DB 	 declare bytes
+immed/string [, immed/string, ...]
+
+DEC 	 decrement
+reg/mem
+
+DIV 	 divide, unsigned
+[accum,] reg/mem 	 accum implicit
+
+DS 	 declare storage
+immed [, immed(8)] 	 bytes, value (default 0)
+
+DW 	 declare words
+immed [, immed, ...]
+
+ELSEIF 	 conditional "else-if"
+immed
+
+ELSE 	 conditional "else"
+immed
+
+ENDIF 	 end of conditional statement
+none
+
+ENDM 	 end of macro declaration
+none
+
+ENDP 	 end of procedure
+none
+
+EQU 	 equate, requires label
+immed
+
+ERRORMAX set maximum errors (default 65535)
+immed
+
+ERROR 	 programmer defined error
+string 	 error message
+
+EXPAND+  list macro expansions (default)
+none
+
+EXPAND-  do not list macro expansions
+none
+
+FLAGALL+ flag all occurrences of undefined symbols
+none
+
+FLAGALL- flag only first occurrence of undef. symbols
+(default)
+none
+
+HLT 	 halt
+none
+
+IDIV 	 integer divide, signed
+[accum,] reg/mem 	 accum implicit
+
+IFN 	 conditional "if not"
+immed
+
+IF 	 conditional "if"
+immed
+
+IMUL 	 integer multiply, signed
+[accum,] reg/mem 	 accum implicit
+
+INCLUDE  include source file
+string 	 file name (default source drive and ext)
+
+INC 	 increment
+reg/mem
+
+Instruction Format:
+<mnemonic> 	 <short description>
+<operand> [, <operand>, ...] [=<comment>]
+
+INTO 	 interrupt on overflow
+none
+
+INT3 	 type 3 interrupt
+none
+
+INT 	 interrupt
+immed(8)
+
+IN 	 input
+accum, immed(8) 	 input from a fixed port
+accum, DX 	 input from a variable port in DX
+
+IRET 	 interrupt return
+none
+
+JAE 	 jump if above or equal
+near
+
+JA 	 jump if above
+near
+
+JBE 	 jump if below or equal
+near
+
+JB 	 jump if below
+near
+
+JCXZ 	 jump if CX equal to zero
+near
+
+JC 	 jump if carry
+near
+
+JE 	 jump if equal
+near
+
+JGE 	 jump if greater or equal
+near
+
+JG 	 jump if greater
+near
+
+JLE 	 jump if less or equal
+near
+
+JL 	 jump if less
+near
+
+JMPS 	 unconditional short jump
+near
+
+JMP 	 unconditional jump
+near 	 direct within segment
+immed (offset), immed (segment) 	 direct intersegment
+reg/mem 	 indirect within segment (16)
+mem 	 indirect intersegment (32)
+
+JNAE 	 jump if not above or equal
+near
+
+JNA 	 jump if not above
+near
+
+JNBE 	 jump if not below or equal
+near
+
+JNB 	 jump if not below
+near
+
+JNC 	 jump if no carry
+near
+
+JNE 	 jump if not equal
+near
+
+JNGE 	 jump if not greater or equal
+near
+
+JNG 	 jump if not greater
+near
+
+JNLE 	 jump if not less or equal
+near
+
+JNL 	 jump if not less
+near
+
+JNO 	 jump if not overflow
+near
+
+JNP 	 jump if not parity
+near
+
+JNS 	 jump if not sign
+near
+
+JNZ 	 jump if not zero
+near
+
+JO 	 jump if overflow
+near
+
+JPE 	 jump if parity even
+near
+
+JPO 	 jump if parity odd
+near
+
+JP 	 jump if parity
+near
+
+JS 	 jump if sign
+near
+
+JUMP+ 	 flag long jumps that could be short
+none
+
+JUMP- 	 do not flag long jumps that could be short
+(default)
+none
+
+JZ 	 jump if zero
+near
+
+LABEL 	 define label, requires label
+NEAR/FAR/BYTE/WORD/DWORD/QWORD/TBYTE/ANYSIZE
+
+LAHF 	 load AH with flags
+none
+
+LDS 	 load DS and register (16)
+reg, reg/mem
+
+LEA 	 load effective address (16)
+reg, reg/mem
+
+LES 	 load ES and register (16)
+reg, reg/mem
+
+LINESIZE 	 set page width (default 79)
+[immed] [, immed(8), ...] 	 page width, printer codes
+
+LIST+ 	 generate listing (default if list file specified)
+none
+
+LIST- 	 list output off
+none
+
+LOCK 	 bus lock prefix
+none
+
+LODSB 	 load string byte
+none
+
+LODSW 	 load string word
+none
+
+LOOPE 	 loop while equal
+near
+
+LOOPNE 	 loop while not equal
+near
+
+LOOPNZ 	 loop while not zero
+near
+
+LOOPZ 	 loop while zero
+near
+
+LOOP 	 loop CX times
+near
+
+MACROC 	 start of conditional macro declaration
+[symbol, ...] 	 parameter names
+
+MACRO 	 start of macro declaration
+[symbol, ...] 	 parameter names
+
+MOVSB 	 move string byte
+none
+
+MOVSW 	 move string word
+none
+
+MOV 	 move
+reg/mem, reg/seg
+reg/seg, reg/mem
+reg/mem, immed
+
+MUL 	 multiply, unsigned
+[accum,] reg/mem 	 accum implicit
+
+NEG 	 decrement
+reg/mem
+
+NEXTIF 	 conditional "if", same level
+immed
+
+NOP 	 no operation
+none
+
+NOT 	 not
+reg/mem
+
+Operand Types:
+none     no operands
+reg      register (non-segment)
+seg      segment register
+accum    AX or AL
+mem      memory operand
+immed    immediate data
+near     near label
+string   string data
+symbol   a unique symbol
+
+ORG 	 origin (default 100H)
+immed 	 relative to location if signed
+
+OR 	 or
+reg/mem, reg
+reg, reg/mem
+reg/mem, immed
+
+OUT 	 output
+immed(8), accum 	 output to fixed port
+DX, accum 	 output to variable port in DX
+
+PAGESIZE set page size (default 60,79)
+immed [,immed] 	 page length, page width
+
+PAGE 	 start new page
+[immed/string]  	 page number, subtitle
+immed [, string] 	 page number, subtitle
+
+PAGE+ 	 start auto paging
+[immed/string]  	 page number, subtitle
+immed [, string] 	 page number, subtitle
+
+PAGE- 	 stop auto paging (default)
+none
+
+POPF 	 pop flags
+none
+
+POP 	 pop (16)
+reg/seg/mem
+
+PROC 	 beginning of procedure
+NEAR/FAR
+
+PUSHF 	 pop flags
+none
+
+PUSH 	 push (16)
+reg/seg/mem
+
+RCL 	 rotate through carry left
+reg/mem 	 one time
+reg/mem, CL 	 CL times
+
+RCR 	 rotate through carry right
+reg/mem 	 one time
+reg/mem, CL 	 CL times
+
+REPE 	 repeat while equal
+none
+
+REPNE 	 repeat while not equal
+none
+
+REPNZ 	 repeat while not zero
+none
+
+REPZ 	 repeat while zero
+none
+
+REP 	 repeat CX times
+none
+
+RESETC 	 reset byte counter
+[immed] [,immed] 	 counter value,
+checksum value (default 0, 0)
+
+RETF 	 within segment return
+none
+immed 	 add immed to stack
+
+RETN 	 intersegment return
+none
+immed 	 add immed to stack
+
+RET 	 return, type determined by procedure
+none
+immed 	 add immed to stack
+
+ROL 	 rotate left
+reg/mem 	 one time
+reg/mem, CL 	 CL times
+
+ROR 	 rotate right
+reg/mem 	 one time
+reg/mem, CL 	 CL times
+
+SAHF 	 store AH to flags
+none
+
+SAL 	 shift arithmetic left
+reg/mem 	 one time
+reg/mem, CL 	 CL times
+
+SAR 	 shift arithmetic right
+reg/mem 	 one time
+reg/mem, CL 	 CL times
+
+SBB 	 subtract with borrow
+reg/mem, reg
+reg, reg/mem
+reg/mem, immed
+
+SCASB 	 scan string byte
+none
+
+SCASW 	 scan string word
+none
+
+SEG 	 segment override prefix
+seg
+
+SHL 	 shift logical left
+reg/mem 	 one time
+reg/mem, CL 	 CL times
+
+SHR 	 shift logical right
+reg/mem 	 one time
+reg/mem, CL 	 CL times
+
+STC 	 set carry
+none
+
+STD 	 set direction
+none
+
+STI 	 set interrupt
+none
+
+STOSB 	 store string byte
+none
+
+STOSW 	 store string word
+none
+
+SUBTITLE set program subtitle
+string 	 subtitle
+
+SUB 	 subtract
+reg/mem, reg
+reg, reg/mem,
+reg/mem, immed
+
+SYMDUMP+ symbol table dump on
+none
+
+SYMDUMP- symbol table dump off (default)
+none
+
+TEST 	 test
+reg/mem, reg
+reg, reg/mem
+reg/mem, immed
+
+TITLE 	 set program title
+string [, string] 	 title, subtitle
+
+UNUSED+  flag unused symbols
+none
+
+UNUSED-  do not flag unused symbols (default)
+none
+
+WAIT 	 wait
+none
+
+XCHG 	 exchange
+reg/mem, reg
+reg, reg/mem
+
+XLAT 	 translate byte in AL
+none
+
+XOR 	 xor
+reg/mem, reg
+reg, reg/mem
+reg/mem, immed
+

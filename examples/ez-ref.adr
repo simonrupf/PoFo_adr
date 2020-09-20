@@ -1,0 +1,1174 @@
+ABACUS BOOKS  (616)698-0330
+Publishers of:
+ 
+The Complete Guide to the
+Atari Portfolio
+ 
+$18
+
+AC Adapter [HPC-401]
+An inexpensive device designed to
+operate the Portfolio on standard
+household current. 120V.
+A model matched to European power
+requirements is available in countries
+outside of the U.S.  $9.95
+
+Address Book
+A database application provided in the
+ROM of the Portfolio. Access is
+obtained by holding the Atari key and
+pressing the A key.
+ 
+The autodialer will provide two
+options of each phone number if the
+entry is made on the top line as
+follows:
+ 
+Artisan Software  (209)239-1552 [main]
+
+ADR file
+A file created by the built-in Address
+Book application of the Portfolio.
+Unless changed by the user, the
+Portfolio will assume UNNAMED.ADR as
+the full filename.
+
+application
+A program designed to provide
+functional or practical results.
+Also applies to a method in which
+computer related products are used.
+
+app (applications)
+A Portfolio DOS command that calls up
+the appications menu. Type:
+ 
+app
+ 
+to get the menu. Type:
+ 
+app/a
+ 
+to get the Address Book application
+to run.
+
+ARTISAN SOFTWARE (209)239-1552
+P.O. Box 849
+Manteca, CA  95336
+Donald A. Thomas, Jr.
+ 
+Makers of TransporT; a file transfer
+application for Atari desktop 16-bit
+computers. Requires serial interface
+and null-modem cable.
+$24.95 +$1.50 S&H
+ 
+Artisan will digitize corporate logos
+and other artwork for the Portfolio.
+$10 per screen. SASE and disk required
+for completed work to be returned.
+
+ascii (American Standard Code)
+Universally compatible assignment of
+character identification numbers.
+Adopted codes provides text file
+compatibility between all computers.
+The Portfolio's built-in applications
+create such universal files.
+
+ATARI COMPUTER CORPORATION (408)744-0880 [cust serv] (408)745-2191 [BBS] (408)745-2004 [tech] (408)745-2008 [fax]
+1196 Borregas Ave.
+Sunnyvale, CA  94089-1302
+ 
+Makers of the Portfolio and an
+assortment of advanced video games and
+home/business computers.
+
+ATARI EXPLORER MAGAZINE  (218)723-9202 [subscribe]
+29-05 Broadway, Suite 2
+Astoria, NY  11106
+John B. Jainschigg, Publisher
+ 
+Up to date reviews and information on
+all Atari products and 3rd party add-
+ons. Six issues per year.  $14.95
+
+AUTOBYTE  (514)637-6232 [main]  (514)637-1491 [fax]
+Selection of Portfolio software
+titles. See Xoterix listing.
+
+autoexec.bat
+A file which is created by the Text
+Editor and contains instructions as
+to what the computer should do when
+warm or cold booted. The Portfolio
+will look for such a file on the C:
+drive if there is not one found on
+the A: drive. A good beginner's
+AUTOEXEC.BAT file might be written
+as follows:
+ 
+@echo off
+prompt $p $
+cls
+UPDATE
+app
+ 
+You may use the clipboard to store the
+above five lines and paste them into
+the Text Editor. UPDATE.COM must be
+copied to the appropriate drive for
+line four to work properly.
+
+AWARE ELECTRONICS  (302)655-3800 [main/fax]
+P.O. Box 4299
+Wilmington, DE  19807
+ 
+RM-60 peripheral plus software turns
+the Portfolio into a portable geiger
+counter.  $149.50
+
+backup
+Refers to the wise practice of making
+more than one copy of important files.
+Backup files should be saved to
+different places than the original
+file is saved. If something wrong
+happens to the original file, the
+backup is used to restore the data.
+
+bar code scanner
+A devise used to read the bar codes
+(often referred as UPC symbol) found
+on product packaging. Bar Codes are
+also used in other applications where
+digital recognition is applied.
+ 
+A bar code scanner may be connected
+to the Portfolio via the Serial
+Interface. Driver software would be
+required. Information may be obtained
+from Monterey Bay Whaling Company.
+
+batteries
+The Portfolio operates on three AA
+batteries for up to 40 continuous
+hours . . . about 4 to 6 weeks of
+average use. NiCad (rechargeable)
+batteries are not recommended by the
+manufacturer and it may void your
+warranty to use them. However, many
+users claim NiCads work fine for them.
+ 
+RAM Memory Cards use a button battery
+(CR2016). Batteries in memory cards
+will sustain data for 9 to 12 months
+depending on use. Users are urged to
+pencil a 9 month anniversary date on
+the label and replace the battery
+when as the date draws near.
+
+bit
+The smallest measure of memory in a
+computer. There are 8 bits in a byte.
+Bits may either be on or off (1 or 0).
+The combination of 8 bit settings
+dictates the value found in a byte.
+
+bit-mapped graphics
+Graphics which are comprised of random
+screen dots turned on or off to make
+a picture. Each dot is controlled
+ultimately by one bit.
+
+BSE  (714)832-4316 [main] (714)832-5381 [fax]
+14701 Candeda Dr.
+Tustin, CA  92680
+Steve Schlanger, President
+ 
+Makers of Flashdrive; portable hard
+drives for the Portfolio. From 20Meg.
+Hard Drives utilize rechargeable
+batteries. Connects to Parallel Port.
+
+byte
+A group of 8 bits. The combination
+of bit settings within a byte
+determines the value of that byte. In
+a 16 bit computer, the processor can
+address 16 bits or 2 bytes at once.
+
+cable
+A wrapped set of wires with specific
+connectors on both ends. Cables may
+differ by which pins are connected
+from end to end.
+
+Calculator
+One of five built-in applications of
+the Portfolio. It may be accessed by
+any one of several ways including
+the pressing of the C key while
+holding the Atari key.
+
+CANON  (800)848-4123
+Makers of an excellent notebook size
+bubble jet printer. Uses standard
+paper and surprisingly quiet.
+$449.95
+
+chkdsk (check disk)
+A DOS command which returns details
+about a given storage drive. Type:
+ 
+chkdsk c:
+ 
+to get information about the built-in
+RAM disk.
+
+clipboard
+A utility which captures text blocks
+within the built-in Portfolio
+applications. F3 (function 3) provides
+access to the clipboard. Use MARK at
+the start of the text block. Move the
+cursor to the end of text. Use CUT to
+delete the text. Use STORE to simply
+capture the text. PASTE places the
+text cut or stored to the current
+cursor position.
+
+cold boot
+Restarting the Portfolio by removing
+batteries and AC and pressing a silver
+plate found in the long, narrow notch
+in the battery compartment. The plate
+may be gently pressed back in the
+machine for five to ten seconds. If
+performed properly without an
+installed memory card, the copyright
+screen will appear and a keyboard
+language will be requested.
+ 
+A cold boot may be required from time
+to time as the Portfolio is used often
+and is subject to user and environment
+changes.
+ 
+Data stored on the C: drive will be
+purged during a cold boot. Data should
+usually be stored to a memory card in
+the A: drive.
+
+compatible
+A term which references the ability
+to function and/or communicate between
+two separate computer systems.
+The Portfolio creates files compatible
+to all computer systems. The Portfolio
+may also be connected to most any
+other computer for easy file transfer.
+
+COMPUSERVE (800)848-8199 [sign-up]
+Call and ask for operator 198 for
+a free introductory sign-up kit and
+$15 usage credit.
+ 
+Use CompuServe as your complete
+Portfolio resource for hot news, user
+interaction and hundreds of software
+downloads. Requires Serial Interface,
+cable, modem and communications
+software.
+
+COMPUTERBOOKS  (714)966-2023 [main]  (714)966-0117 [fax]
+Newport Trade Centre
+20351 Irvine Avenue, #9
+P.O. Box 9167
+Newport Beach, CA  92658
+ 
+Makers of Pharmaceuticals and
+Physicians' Desk Reference I software
+for the Portfolio. Perfect for interns
+and the stablished medical
+community alike.
+ 
+New applications forthcoming.
+
+com1
+Many computers may offer more than one
+RS-232 serial port. COM1 refers to the
+first one in sequence. When there are
+more than one on a MS-DOS orientated
+machine, the others would be
+designated as COM2, COM3, etc.
+ 
+The Portfolio's Serial Interface
+provides a COM1 9-pin serial port.
+
+config.sys
+This is a file that may be created by
+the Text Editor and saved to the C:
+drive of the Portfolio. The contents
+of the file help the Portfolio to
+establish operational defaults.
+ 
+An ideal CONFIG.SYS file would read
+as follows:
+ 
+Files=20
+Buffers=32
+Country=001
+ 
+If you wish, use the clipboard and
+capture the above three lines. Then
+you may paste them in an empty Text
+Editor file and save the file as
+C:\CONFIG.SYS.
+
+copy
+A DOS command that allows one or more
+files to be copied from one location
+to another. Type:
+ 
+copy c:\*.* a:\*.*
+ 
+to copy all files in the root
+directory of the C: drive to the root
+directory of the A: drive. Type:
+ 
+copy a:\*.dry c:\system\*.dry
+ 
+to copy all Diary files from the A:
+drive to the system directory on
+the C: drive.
+
+COURSEMASTER  (718)383-4968 [main]  (718)383-1864 [fax]
+232 Richardson St.
+Greenpoint, NY  11222
+ 
+Makers of the Marine Device Interface;
+permitting control over marine
+transmitting devices.
+
+cursor
+The marker on the computer screen
+which indicates where text will appear
+when typed. Sometimes the cursor is
+a block or it may be an underline. In
+some programs it may blink. The author
+of the program has the power to design
+a custom cursor to meet his or her
+needs.
+
+cursor key
+One of a group of keys which changes
+the position of the cursor. Cursor
+keys are usually grouped together and
+denoted by north, south, east and west
+arrows. On the Portfolio, they are
+the four arrow keys on the lower right
+portion of the keyboard.
+
+database
+A database is a program which provides
+the entry and recall of formatted
+information. The Address Book of the
+Portfolio is an excellent database in
+its simplist form. It may be used for
+a wide variety of topics other than
+just names and addresses.
+
+data file
+A file which contains information.
+ 
+Datafiles are created by running
+programs and often only accessible by
+the original program.
+ 
+The built-in applications of the
+Portfolio create ASCII data files
+which are universally compatible
+with most word processors and
+databases.
+
+delete
+To remove information or a file from
+memory of a computer.
+ 
+To remove a file in the Portfolio
+using DOS, type:
+ 
+DEL FILENAME.EXT
+
+desktop computer
+A computer designed to fit on the top
+of a desk or work area. Larger
+computers are known as mainframes and
+are often set up in tempature-
+controlled rooms. Smaller ones are
+called laptops or portables or
+palmtops.
+
+Diary
+Appointment/Calendar application
+built-in the Portfolio's ROM. Access
+it by holding the Atari key and
+pressing the D key.
+ 
+The alarms will only work if they are
+saved to a file called DIARY.DRY in
+the system directory of the C: drive.
+
+DIP SYSTEMS  (0483)301555 [main] (0483)301434 [fax]
+32 Frederick Sanger Road
+Surrey Research Park
+Guildford
+GU2 5XN
+ 
+Distributors of many exceptional
+softawre and peripheral items for
+the Portfolio in European countries.
+
+dir (directory)
+A list of the files saved in on a
+specified drive. To get a directory
+of the files of the C: drive using
+DOS, type:
+ 
+DIR C:\*.*
+
+documentation
+The instructions to inform the user
+how to use something (s)he has
+acquired. Sometimes it is printed in
+a book or on paper. Other times it may
+appear as a separate file with a .DOC
+or .TXT extender.
+ 
+One common documentation filename is:
+ 
+README.DOC
+
+DOS (Disk Operating System)
+Also known as OS, DOS is the
+fundamental group of commands that
+tell the computer how to follow the
+users instructions to display
+directories, copy files, run programs,
+etc.
+
+download
+To receive information from a source
+outside of the computer into the
+computer. Downloading usually requires
+communications software. Information
+may come from other computers directly
+or over phone lines.
+
+DRY file
+A file created by the built-in
+CALENDAR/DIARY application of the
+Portfolio. Unless changed by the user,
+the Portfolio will assume DIARY.DRY
+as the full filename. This file must
+be saved in the SYSTEM directory on
+the C: drive if the user wishes the
+alarms to function automatically.
+
+ESSEX MARKETING SERVICES  (203)651-8284 [main]  (203)676-9481 [fax]
+272 Old Farms Rd.
+Simsbury, CT  06070
+ 
+Source for Forth Programming System
+$95
+
+EXTECH INSTRUMENTS (617)890-7440 [main] (617)890-7364 [fax]
+150 Bear Hill Rd.
+Waltham, MA  02154
+ 
+Makers of small, portable serial
+printers.  $249
+
+extender
+A 1, 2 or 3 character tail to a
+filename. The file: UNNAMED.ADR has
+an extender of 3 charaters (ADR) and,
+in this case tells the system and the
+user that the file is an Address Book
+file.
+
+fdisk (format RAM disk)
+A Portfolio DOS command which allows
+the user to change the size of the
+built-in RAM disk. The drive will be
+set to the nearest 8K acceptable
+increment. The smallest is 8K and the
+largest in a 128K Portfolio is 80K.
+ 
+Type:
+ 
+fdisk 8
+ 
+to change from the default 32K RAM
+disk to an 8K RAM disk. The larger
+the RAM disk, the smaller the
+available working RAM to develop
+files. NOTE: all files on the C:
+drive will be lost when the fdisk
+command is used.
+
+file
+A string of information which is saved
+to disk. programs are saved as one
+form of a file. Programs load and save
+data files.
+ 
+The Portfolio defaults to filenames
+beginning with UNNAMED until manually
+changed by the user.
+
+File Manager  [HPC-704]
+A special programmed released by Atari
+Computer Corp. to help users have
+access to DOS commands with less
+confusion. Many people refer to it as
+a mini WINDOWS for the Portfolio. It
+is distributed on a special ROM Card
+and currently packaged with new
+Portfolios. Users may order it from
+Atari for only $20 plus shipping.
+
+filename
+A name given to a string of infomation
+saved to a storage device such as the
+C: drive or a Memory Card. Each file
+must have a unique filename.
+ 
+Filenames may be up to 12 chacaters.
+The first 8 are ASCII characters, the
+9th is a period and the remaining
+are called an extender.
+
+format
+A DOS command to format a RAM memory
+card. All memory cards must be
+formatted after the battery is
+installed and before it may be used.
+You may also reformat a card if it
+is desired that all files should be
+deleted on the card. Type:
+ 
+format a:
+ 
+to format the A: drive. Use the fdisk
+command to format the C: drive.
+
+ft.com
+A program which is packaged with
+Atari's Smart Parallel Interface. It
+runs on most MS-DOS compatible
+computers and allows files to be
+exchanged with the Portfolio over the
+LPT1 parallel ports. A straight line
+cable is required.
+
+function key
+On larger computers, the function keys
+are grouped together and identified
+as F1, F2, etc. F10, F11, etc. may
+be accessed by pressing the same keys
+while the Shift key is pressed.
+ 
+Function keys do different things in
+different programs. DOS makes use of
+them too when no program is running.
+They will always be explained by the
+documentation.
+
+graphics
+This term refers to any non-text
+display. A simple line or circle is
+known as graphics. Graphics may be
+used to draw borders or charts.
+ 
+Advanced grahics involve bit-mapped
+pictures and illustrations. The
+Portfolio can display bit-mapped
+graphics and simple graphics.
+
+hardware
+Computer related products which are
+mechanical or solid state. Computers,
+printers, modems and disk drives are
+all examples of hardware.
+
+help
+A Portfolio DOS command thar returns
+a list of Portfolio type-in DOS
+commands.
+ 
+From DOS type:
+ 
+help
+
+INTERLOOP  (408)922-0520
+Source for HPIL Interface. This
+peripheral allows the connection
+of HP standard peripherals to
+the Portfolio. Up to 23 devices may
+be connected at one time.
+
+keyboard
+The panel on which a user types to
+interact with a computer. The panel
+is made up of many keys.
+ 
+The Portfolio's keyboard is called
+a QWERTY keyboard.
+
+laptop computer
+A computer which is designed to be
+frequently carried. It typically has
+a built-in screen and keyboard and
+operates for a few hours on batteries.
+Also known as just laptops, they may
+weigh between 8 and 16 pounds.
+
+load
+The act of retoring data to an
+application which was previously
+saved. An example might be recalling
+a document in to a word processor.
+
+lpt1
+Many computers may offer more than one
+parallel port. LPT1 refers to the
+first one in sequence. When there are
+more than one on a MS-DOS orientated
+machine, the others would be
+designated as LPT2, LPT3, etc.
+ 
+The Portfolio's Smart Parallel
+Interface provides a LPT1 25-pin
+parallel port.
+
+masked ROM
+A type of ROM memory card available to
+developers. Masked ROM cards are
+manufactured with the software already
+on them. Masked ROM cards are less
+expensive, but a large minimum order
+is required.
+ 
+Contact Atari for more information.
+
+MEGABYTE COMPUTERS (817)589-2950
+909 Melbourne
+Hurst, TX  76053
+ 
+Megabyte Computers can internally
+expand the Portfolio RAM to 512K.
+$349 or $549 including Portfolio.
+
+merge
+The combining two separate files into
+one. Many file based applications
+support the ability to import one file
+into another. If the combined file is
+saved under a separate name, the two
+original files are not changed.
+
+modem
+A device hich converts computer data
+to sound pulses understood by the
+telephone system. Many of the modems
+available today are known as Hayes
+compatible meaning they use the same
+instructions to operate. A special
+program must run on the computer to
+use the modem. Modems offer different
+features including maximum tansmission
+speed. An accepted standard today is
+2400 baud although faster and slower
+speeds are often used.
+
+MONTEREY BAY WHALING COMPANY (408)475-4290 [main]  (408)476-2456 [fax]
+2681 N. Rodeo Gulch Rd.
+Soquel, CA  95073
+John Feagans, Engineer
+ 
+Consultants and developers;
+specializing in communications and
+peripherals for the Portfolio.
+
+NAIDITCH CONSULTING  (312)362-3600 [main]  (312)362-2379 [fax]
+440 South LaSalle, #1767
+Chicago, IL  60605
+ 
+Specialized stock portfolio tracking
+software.
+
+off
+On the Portfolio, turning it off
+simply disables the screen and other
+energy-consuming functions. Either
+the batteries or AC will continue to
+support RAM even if the off command is
+used. Type: off at the DOS propt or
+press Fn/O to turn the Portfolio off.
+
+ONLINE TECHNOLOGIES  (216)831-6160 [main]  (216)464-3317 [fax]
+23715 Mercantile Rd., #203
+Beachwood, OH  44122
+Kenneth N. Oif
+ 
+TimePac-5 time billing software
+
+operating system
+The operating sytem is the software
+in ROM which instructs the Portfolio
+how to behave to user intervention.
+See DOS.
+
+organizer
+An organizer is a small electronic
+device which provides elementary
+computer functions such as note
+taking and calculator features.
+On the downside, organizers are
+difficult to expand or connect
+computer peripherals. Most users can
+not simply write, load or save their
+own software on an organizer.
+
+OTP card (One Time Programmable)
+A form of ROM Card available from
+Atari. OTP cards may be programmed
+once on an EPROM burner using Atari's
+EPROM adapter board.
+ 
+Call Atari for more nformation.
+
+overwrite
+Overwriting is the same as erasing or
+deleting a file and saving a new one
+by the same name. The new one is most
+likely different from the original
+and the original is no longer
+accessible if the act of overwriting
+is used.
+
+PARAGON TECHNOLOGIES  (800)255-9411
+P.O. Box 273511
+Boca Raton, FL  33427
+ 
+DUATS and flight planning software
+for avaition pilots.
+
+Parallel Interface [HPC-101]
+The Smart Parallel Interface by Atari
+is an optional peripheral which
+provides a standard parallel port.
+Parallel ports are usually used to
+connect printers. See LPT1. Atari
+also uses this interface for file
+transfers with most MS-DOS compatible
+PCs which also offer an LPT1
+bi-directional parallel port.  $49.95
+
+PC Card Drive [HPC-301]
+A device which installs in an empty
+8-bit full card slot of a desktop PC.
+The device allows users to plug
+Portfolio Memory Cards directly in a
+PC to be read as a diskette.  $99.95
+
+pixel
+A single dot on a monitor or screen.
+The Portfolio has 15,360 pixels.
+(240x64)
+
+PowerBasic [HPC-705]
+A programming package due to be
+released by Atari in September of
+1991. It supports graphics and a host
+of other popular Basic functions.
+ 
+Contact Atari for more information.
+
+PRACTICAL PERIPHERALS  (800)442-4774
+Ideal pocket modem about the size of
+a pack of cigarettes. No extra
+batteries required . . . line powered.
+It supports 300, 1200 and 2400 baud.
+$159
+
+printer
+A device which is connected to a
+computer through the parallel or
+serial port. This device is loaded
+with paper and provides text and
+images of files or graphics from
+the computer.
+
+program
+Another term for software or the act
+of creating software. Programs are
+saved as files and have special
+extenders on the Portfolio. Such
+extenders are: .COM, .EXE and .RUN.
+
+programmable
+The ability of the end user to create
+programs for the computer they
+acquired.
+
+prompt
+A DOS command which allows the user
+to change the symbols displayed when
+the computer is expecting input from
+the user. A good prompt command might
+be:
+ 
+prompt $p $
+ 
+This tells the computer to display
+the current directory path, then
+leave a space. See the Portfolio
+owners' manual for other options
+using the prompt command.
+
+public domain
+Software and infomation released to
+be freely distributed and used by the
+public. Usually such software my not
+be sold by anyone although many
+companies may sell the disks such
+software are on as well as charge a
+fee to have copied it to that disk.
+
+PULSE METRIC, INC.  (619)546-9461 [main]  (619)546-9470 [fax]
+10225 Barnes Canyon Rd., #A100
+San Diego, CA  92121
+ 
+Blood pressure and home health
+monitoring system.  $299
+
+QWERTY keyboard
+A keyboard with the alphabet laid out
+like a typewriter. The QWERTY
+comes from the fact that the letters:
+Q, W, E, R, T and Y are found in
+sequence along the top left portion
+of the keyboard.
+
+RAM disk
+A portion of RAM memory put aside to
+interact with the computer like a disk
+drive. In the Portfolio, it is
+designated as the C: drive.
+ 
+The benefit of a RAM disk is
+extremely fast file access. The
+disadavntage is that the information
+may be easily lost if the computer
+locks up or loses power.
+
+RAM (Random Access Memory)
+There are two basic forms of memory
+in any computer. RAM is the portion
+that changes as it is being used.
+
+ren  (rename)
+A DOS command which provides a user
+the means to change the name of an
+existing file. Type:
+ 
+ren c:\unnamed.txt myfile.txt
+ 
+to change unnamed.txt on the C: drive
+to myfile.txt
+
+reset
+The act of forcing the computer to
+return to a specific point of
+operation. Reset usually refers to a
+warm boot.
+
+ROM (Read Only Memory)
+There are two basic forms of memory
+in any computer. ROM is the portion
+that always remains the same. ROM
+stores the data programmed by the
+factory that enables the computer to
+operate.
+
+RS232
+A data communications standard
+recommended by the Electronics
+Industries Association. Most user-
+based computers adhere to this
+standard.
+
+RUN file
+On the Portfolio, a .RUN file is
+specially developed to operate in
+place on a ROM card so that minimal
+RAM is used and available to the user
+for developing data files. Developers
+interested in this technology are
+encourgaed to contact Atari for more
+information.
+
+save
+The act of naming a file and
+copying data out of the computer's
+RAM into the file. On the Portfolio,
+this may mean copying from the
+working RAM into another portion of
+RAM called storage RAM (the C: drive).
+
+search
+To look for a specified portion of
+data within a file or in memory.
+Usually the data must match exactly.
+In some cases, applications may offer
+search capabilities without case
+sensitivity; meaning the group of
+characters may matched whether they
+are capatalized or not.
+
+Serial Interface [HPC-102]
+A device which connects to the right
+expansion port of the Portfolio. It is
+used to provide an industry standard
+9-pin RS232 serial port.
+ 
+Serial ports are commonly used for
+communications such as modems, but
+may also be used for other devices
+such as some printers, bar code
+readers, etc.
+
+shareware
+Software written and released for free
+public distribution. If a user likes
+it and uses it, (s)he is requested
+to send a nominal monetary amount to
+the author. The address and possible
+contribution benefits are described
+by a text file or within the program.
+
+software
+One or more files which are saved
+to a storage medium. Other terms
+for software are applications,
+programs and utilities.
+
+space/return
+Two consequtive keypresses. The
+first being the space bar, the second
+being the return key.
+ 
+These two characters are used to
+reserve blank lines with an Address
+Book file. They also may cause
+hard-to-predict problems in the Text
+Editor of some versions of the
+Portfolio. The latter problem may be
+resolved by running the program
+called UPDATE.COM found on the
+File Manager card and in the public
+domain.
+
+spreadsheet
+An application which provides access
+to calculations via column and row
+data entry. The files created by such
+aplications are also known as
+spreadsheets.
+
+syntax error
+Usually this refers to a typing error
+on the part of a user. It rarely
+causes any damage to the operation
+of the computer or the integrity of
+data and is remedied by retyping the
+entry correctly.
+
+system error
+A problem which may develop in the
+operation of a computer. A system
+error is sometimes recoverable by
+a warm boot and sometimes only
+remedied by a complete cold boot.
+ 
+With millions of bits constantly
+changing in a computer, system
+errors can be caused by many things
+and are not always predictable.
+
+TEKNOW!  (602)968-7656 [main]  (602)968-7366 [fax]
+1500 S. Priest, #101
+P.O. Box 25486
+Tempe, AZ  85285-5486
+ 
+Alpha Paging software.  $89.99
+
+Text Editor
+One of the five built-in applications
+of the Portfolio. Also known as a
+word processor, the Text Editor may be
+activated by pressing the E key while
+holding the Atari key.
+ 
+Please run a program found on the
+File Manager card or in the public
+domain called UPDATE.COM before using
+the Text Editor.
+
+TXT file
+A file created by the built-in Text
+EDITOR application of the Portfolio.
+Unless changed by the user, the
+Portfolio will assume UNNAMED.TXT as
+the full filename.
+
+UPDATE.COM
+This special file has been released
+to the public domain for wide and
+low cost distribution. It is also
+found on the File Manager Card. By
+running the program, the internal
+ROM is circumvented in operation on
+special occasions to fix or improve
+the completion of the operation in
+progress. UPDATE.COM repairs the
+Space/return situation in version
+1.072 of the Portfolio amoung other
+things.
+ 
+It is best used by writing an
+AUTOEXEC.BAT file which instructs
+the system to run it after every
+warm and cold boot.
+
+upload
+To send information to a destination
+outside of the computer originating
+from the computer. Uploading usually
+requires communications software.
+Information may come from other
+computers directly or over phone
+lines.
+
+user
+Someone who uses a computer.
+
+warm boot
+The forcing of a computer to jump to
+an early stage of operation; such as
+when it is first turned on. This may
+be required if the computer fails to
+respond otherwise or begins to behave
+inappropriately.
+ 
+There are two ways to warm boot on the
+Portfolio. The preferred way is to
+press the Del key while the Ctrl and
+Alt keys are simultaneously held down.
+The second way is by pressin in on the
+reset button with a paperclip on the
+bottom of the machine.
+
+WKS file
+A file created by the built-in
+Spreadsheet application of the
+Portfolio. Unless changed by the user,
+the Portfolio will assume UNNAMED.WKS
+as the full filename.
+
+word processor
+A program which is designed to create
+letters and other documents. Extremely
+high end word processors are known as
+desktop publishing programs.
+Different word processors may offer
+a wide variety of different features.
+The Text Editor of the Portfolio is
+an excellent example of a basic word
+processor.
+
+Worksheet
+One of the five built-in applications
+of the Portfolio. Also known as a
+spreadsheet. See spreadsheet.
+
+write protect
+A switch, tab or software setting
+which prohibits future altering or
+deleting of one or more files which
+have already been saved.
+ 
+The write protect switch on Portfolio
+RAM memory cards protect all the files
+and prohibits any of them to be
+changed until the switcvh is placed
+off again.
+
+xmodem
+A widely accepted protocol to validate
+the accuracy of data which is sent
+electronically from one computer to
+another. An example would be over a
+modem and phone lines. The system
+allows computers to tell each other
+if the data sent is correct and to
+retransmit the same data if not.
+
+XOTERIX  (818)888-7390
+23106 Baltar St.
+West Hills, CA  91304
+Mark Henderson
+ 
+Source for a variety of Autobyte
+software titles including:
+ 
+Checkwriter ..... $149.99
+PBASE ........... $ 99.99
+Stocks Games .... $ 79.99
+Terminal+ ....... $ 79.99
+
+XTERM.EXE
+A program written by Jim Straus and
+submitted to the public domain by
+special arrangement with Atari. The
+program is a communications driver
+for modems or direct-to-desktop file
+transfers over the serial port. It
+may be found on popular on-line
+services such as CompuServe or
+obtained from a full-service
+Portfolio dealer.
+
+128K RAM Memory Card [HPC-203]
+An electronic diskette which functions
+as a disk drive on the Portfolio. The
+capacity is 128K bytes or one megabit.
+$169.95
+
+32K RAM Memory Card [HPC-201]
+An electronic diskette which functions
+as a disk drive on the Portfolio. The
+capacity is 32K bytes or 256K bits.
+$69.95
+
+64K RAM Memory Card [HPC-202]
+An electronic diskette which functions
+as a disk drive on the Portfolio. The
+capacity is 64K bytes or 512K bits.
+$99.95
+
+                                                                   

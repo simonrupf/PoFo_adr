@@ -1,0 +1,142 @@
+APP [/A/C/D/E/S/W/C]
+Only one allowed
+Takes you directly to ADDR BOOK,CALC,
+DIARY,EDITOR or SETUP
+
+BREAK [ON,OFF]
+BREAK (no arg)-reports current state
+BREAK ON  -Fn B halts immediately
+BREAK OFF -Fn B halts at next screen
+           or keyboard activity
+
+CD [dir string] (Change Directory)
+CD    -returns current dir
+CD \  -changes to root dir
+CD A:\DATA\NEW
+CD .. -moves up one level
+CD NOTES (no \) -move down one level
+
+CHKDSK [disk][/p] (list disk content)
+CHKDSK a:  -lists memory useage of 
+            disk
+/P =one page at a time
+
+CLS   (clear screen)
+CLS   -also homes cursor and window
+
+COPY [path1] [path2]
+COPY DATA.TXT TEMP.TXT
+COPY *.TXT A:\DATA\*.*
+COPY TEMP?.TXT C:\*.SAV
+* =wildcard, ? =single char wildcard
+
+DATE [mm-dd-yy]
+DATE 10-26-90 -sets date
+DATE   -returns current date, asks
+        for new one (RETURN keeps
+        current)
+
+DEL [path]  (Delete file)
+DEL MORTG.TXT
+DEL A:\DATA\TEST.*
+DEL A:\DATA\TEST?.TXT
+* =wildcard  ? =single char wildcard
+
+DIR [path][/p][/w][>] (List directory)
+DIR A:\DATA  -lists files,size,date &
+DIR           time on default or
+/P =one Page at a time
+/W =names only across screen Width
+
+FDISK [n] (set RAM disk size)
+FDISK 16  -sets the size of the C:
+           RAM disk to 16K
+also does cold start: all data lost
+
+FORMAT [disk][/V] (disk format)
+FORMAT A:  -formats card in a:
+            all previous data lost!
+/V will ask for volume name after
+   format
+
+HELP (Lists DOS commands)
+HELP  -lists only, no syntax or
+       examples
+
+MD [disk][path][dirname] (Make dir)
+MD A:\HOME\DATA
+MD DATA -creates directory DATA below
+         current disk\directory
+
+OFF  (PF off (standby))
+
+PATH [path1];[path2]... (search path)
+PATH A:\;C:\;C:\MAIN\PROGS
+PATH ; -reset to current working dir
+Sets search path for any executable
+command looking for a file, esp. in
+.BAT files
+
+PROMPT [text][$n$m..] (set sys prompt)
+PROMPT PRTF $p -Prompt=Prtf a:\data>
+$d=cur date $t=cur time $p=cur dr\dir
+$v=DOS ver# $n=cur drv  $g= >
+$l= <       $b= |       $_=CR-LF
+$s=space    $h=backsp
+
+RD [drive][dir] (remove directory)
+RD A:\DATA
+-directory must be empty
+
+REN [path]file1 file2 (Rename)
+REN TESTDAT.WKS NEWDAT.WKS
+REN A:\FINAN\MONEY.WKS TEMP.*
+-both names must have same path
+
+RUN [path][file] (Run mem card prog)
+(used ONLY for certain Portfolio mem
+ card progs)
+RUN A:\FIXIT.COM
+
+SET [chrstr1]=[chrstr2] (set synonym)
+SET -returns current definitions
+SET NAME=DAVID
+SET NAME=  -removes setting
+(used mostly in .BAT files)
+
+TIME [hh:[mm:[ss]]] (Set time}
+TIME -returns cur time and req new
+TIME 06:17:29
+
+TYPE [path]filename[/p] (Type file)
+TYPE C:\NEWDAT.TXT -displays file con-
+                    tents 
+TYPE TESTDAT.TXT/P -ditto, 1 p at time
+
+VERIFY [ON,OFF] (File write verify)
+VERIFY ON
+VERIFY OFF
+VERIFY  -displays current setting
+
+VER (DOS version number)
+VER  -prints DOS version number on 
+      screen
+
+VOL [disk] (Display Vol number)
+VOL a: -displays label for disk a:
+        (see also LABEL)
+
+< [device] (Redirect input from dev)
+After any command requiring input
+Devices:           PRN -parallel port
+AUX -serial port   LPT1    "      "
+COM1   "     "     NUL -no output
+CON -console(kybd) FILENAME
+
+> [device] (Redirect output to dev)
+After any command producing output
+Devices:           PRN -parallel port
+AUX -serial port   LPT1    "      "
+COM1   "     "     NUL -no output
+CON -console(kybd) FILENAME
+

@@ -1,0 +1,282 @@
+p34 vD M/cs
+Store your data
+Protect your data
+Removable m/cs work like floppy disks on a DT
+comp. RAM cards have battery back-up & write-protect
+switches which are used for file/pgm storage
+I 128KB œ113.00, 64KB œ73.87, 32KB œ43.43
+
+p34 vB Memory Modules
+Fully compatible w/the PF & original m/cs. All
+modules are equipped w/a back-up battery (high capacity CR2032)
+and the electronic parts are contained in a small casing (20x50x70mm)
+The modules will also work w/a card drive unit
+I Memory Module w/256KB RAM-RRP œ182 56, w/512KB RAM-RRP œ252 13
+w/1MB RAM-RRP œ373 87
+
+p35 vB Internal Memory Expansion
+Does your application require more memory ?
+Have the internal memory expanded
+The PF's internal memory can now be expanded up to
+256KB, 348KB, 512KB/640KB
+There will be no change to the outer dimensions of the machine and
+the entire memory is available for DOS & can be configured w/FDISK
+I Delivery 4-6 Weeks Internal Expansion to 256KB-RRP œ130.39
+Internal Expansion to 512KB-RRP œ260.83
+
+p35 vB Greater capacity PF
+Buy a machine with a pre-expanded memory
+Availability: Six Weeks
+Machine incl 256KB-RRP œ260.83
+Machine incl 512KB-RRP œ347.78
+
+p36 vMT Ruggedised PF
+Make your PF virtually indestructable!
+Use it anywhere and for anything
+Modulec Technology have modified the PF to make it more
+robust & suitable for use in the most difficult of conditions.
+It will stand up to almost anything, almost anywhere
+Features:
+>Physical
+ Case: Polycarbonate Composite
+ Size: 227 x 177 x 35 (front) 50 (rear) mm
+ Weight: Under 1000 grammes
+>Memory
+ RAM: 640K user assignable for system & RAM disk
+ ROM: 256K Operating system & application,
+ 128K user-defined
+>Comms
+ 1 parallel port for printer
+ 2 RS232 serial ports
+>Power Supply
+ 3 x AA Batteries/6-16V DC supply/external mains adaptor
+>Memory Back-up-Supported by integral lithium & superoap
+I œ1200.00
+
+p37 vD PC Card Drive
+Use your PF data on your DT? No problem
+Trfr data to & from the PF? Easy
+A disk drive to read your m/cs
+The PC Card Drive allows the reading & writing of the PFs
+m/cs using an IBM PC. The Card Drive uses a std
+8-bit PC expansion slot & runs a cable to a well-designed casing
+which contains a m/c slot
+s/w is incl'd on both 3.5 & 5.25 disks
+Main benefits incl:
+>Immediate data trfr
+>Connects your PF to your DT comp
+>Simple to install
+>Acts like another drive on your desk PC
+>Well-designed, hard-wearing casing
+>reads your m/cs w/out using the PF
+I œ60.83
+
+p38 vD File Trfr Cable
+25-pin to 25-pin cable for file trfr b/t an IBM PC & the
+PF using the parallel peripheral
+I œ10.39
+
+p38 vB Trans-Drive
+Connects the PF to an IBM compatible PC & allows the
+PF to access a floppy/m/c drive of the other
+comp like it's own drive
+Features:
+>All DOS cmds such as DIR, COPY, DEL etc
+ (except FORMAT) can be used
+>High speed of data transmission
+>Easy to use
+I œ59.00
+
+p39 vMD memo-RAM-Card-Station
+The memo-RAM-Card-Station is a read/write card drive for PF
+m/cs. The unit works w/all IBM compatible PCs
+due to an interface to the centronics printer port on the
+DT compuler
+All RAM cards used with the PF can be read & written to
+A RAM card is addressed in exactly the same way as in the PF
+Installation is straightforward & it can be connected w/out
+opening up the DT comp
+The unit can be connected to laptops, portables & microchannel
+machines such as the IBM PS/2, which a normal card drive is unable
+to access.
+Using the supplied driver s/w a m/c is treated like a
+FDD by the PC in the same way as a card drive
+Features:
+>Can be connected to any MS-DOS PC
+>Connects through a std centronics port
+>Simple to install
+>User-friendly s/w
+>AC adaptor incl'd
+>Detailed instructions
+I œ86.00
+
+p40 vCR Retriever
+The Retriever is a portable battery operated 3.5 FDD unit
+which connects to the PF via the serial interface
+It's main features are:
+>Compact & robust
+>Instant access to data on IBM diskettes for PF
+>Operates as another drive to the PF
+ using the device driver s/w supplied
+>Runs off rechargeable batteries/AC adaptor
+>Designed, built & supported by Cristie in the U.K
+The Retriever supplied for use w/the PF is
+supplied w/the driver s/w on 3.5 diskette & a 2m cable
+to connect to the serial peripheral
+Spring 1991
+Retriever œ349.00
+Carrying case œ20.80
+Mains adaptor (UK) œ24.35
+Replacement NiCad battery pack œ37.50
+
+p41 vD Pkt Modem
+The Pkt Modem links to the expansion connector on the right of
+the PF. It is a V21 & V22 Hayes compatible auto-answer
+modem for data trfr using the std telephone network
+The Pkt Modem comes supplied w/a comprehensive
+comms application & example s/w. This is supplied
+on a built-in 128KB EPROM & is designed to run from this
+memory & to use only 4K of internal RAM for workspace
+It includes ASCII VT52 & VTIOO emulation incl'g data
+logging. File trfr using ASCII XMODEM & KERMIT protocols
+is supported. The Pkt Modem can be operated using the menu
+structure/controlled by using the modem script language
+It's main features incl:
+>BABT approved
+>Auto-answer
+>Built-in speaker to monitor progress of call
+>V21 & V22 Hayes compatible
+>TTY, VT52, VTIOO teriminal emulation
+>Powerful script language w/example files
+>Supports Bell & CITT networks for world-wide operation
+>Contains socket for optional acoustic coupler
+>Supplied w/telephone cable
+>Instruction manual
+I œ199.00
+
+
+p42 vMB Pkt PC Modem
+This modem from Micro Technology in the Netherlands is a 1200/
+1200 baud V22 Auto-answer version which plugs into the bus
+expansion conncctor on the right side of the PF. The
+software is supplied on a disk & is copied onto the C: drive/a
+m/c and .supports Videotex (Prestel) as well as VT52
+terminal emulation
+Features:
+>V22, Auto-answer
+>Videotex (Prestel) and VT52 (terminal) emulation
+>Acoustic coupler incl'd
+I œ174.87
+
+p42 vSI Radio Modems
+Siskin Electronics produce a range of radio modems suitable for
+trfr'g conventional RS-232 style data via two-way radio. The
+PF makes an ideal portable comms terminal (if a
+serial interface is fitted). There is a suite of software available that
+will allow not just ASCII comms but also XMODEM file
+transfer protocols plus a range of connection cables/interfaces etc to
+match the machine. Both amateur (radio hams) & commercial
+product ranges are available
+I œA
+
+p43 vI Portalog
+The easiest way of measuring anything
+Compact DMM-logger on MS-DOS basis
+1st digital multimeter w/its own intelligence
+Portalog is a very compact, economical, offmains measuring system
+made by IBP. It is small, light & handy to use. The PF
+serves as a base & IBP has developed a DMM interface which turns
+the machine into a powerful measurement logger
+There are ten measuring channels available, 1 having an autorange
+facility. Voltages of up to 400 V AC/DC & currents of up to 400
+mA can be measured directly. Sensors can be connected up as
+req'd. The measurement set-up can be adjusted to any system
+All the channels can be displayed graphically on a printer
+Portalog is an inexpensive measuring system w/numerous
+possibilities of documentation both for research & teaching purposes,
+and also for service & quality assurance depts
+>10 measuring channels, 1 w/autorange
+>Stores up to 250,000 values
+>AC/DC voltage & current measurement
+>Measuring task can be configured as req'd
+>Sampling times from 50 msec to 24 hours
+>Off mains
+>Centronics printer port
+>Continuous graphic printout
+>Data trfr to PC through incl'd Portaview s/w
+I œA
+
+p44 vMS Palmdac
+Palmdac is a data acquisition module that plugs into the PFs
+expansion bus. The system comes complete w/data acquisition
+s/w which can be used to collect data on six channels
+simultaneously. Custom applications are developed quickly and
+efficiently using your favourite PC pgm'g environment &
+the 2 libraries provided
+Features:
+>2 different channels w/excitation
+>4 single ended channels
+>Pgm'able sample rates up to 1024Hz
+>Pgm'able timer w/interrupt capability
+>12 bit resolution, 10 bit accuracy
+>2 independent amplifiers
+>2 independent analog filters
+>Utilizes the PFs power
+High level language library support
+Applications for the Palmdac are developed using std
+development tools in a PC environment. Using library functions
+supplied w/the Palmdac the user can control the data acquisition
+h/w via high level cmds. The familiar PC environment
+allows the user to create new applications efficiently, without the use
+of cross development tools
+I œ199.00
+
+p45 vD Memory Expander Plus
+Not enough memory ? No problem
+Thc Memory Expander plus extends the internal PF's RAM
+from 128K to 384K RAM by inserting into the PF expansion
+connector. In addition to expanding the memory by 256K the
+Memory Expander contains a m/c connector which provides
+the PF w/an extra card drive (drive B:). The unit extends
+the PF expansion connector allowing other peripherals to be
+connected to the Memory Expander
+The Memory Expander Plus is of particular benefit to people
+developing pgms on thc PF who need more memory
+while working
+I œ156.48
+
+p45 vD PF Carrying Case
+A touch of Class
+A quality leather-effect carrying case w/wrist strap for your
+PF which is both compact & business-like. There are
+pkts to store a peripheral, RAM cards, cable & spare batteries
+I œ24.95
+
+
+p46 vD Parallel Peripheral
+The parallel peripheral connects the PF expansion connector
+on the right of the machine, w/std parallel output (25-pin
+D-type) to a printer. Also incl'd is a PC file transfer pgm on 3.5
+and 5.25 disks which enable files to be sent to & from an IBM PC
+using the parallel port. Printer & file trfr cables not incl'd
+I œ34.74
+
+p46 vD Serial Peripheral
+The serial peripheral connects the PF expansion connector
+on the right of the machine, w/a std RS 232 output (9-pin
+D-type) for serial devices such as printers. Cable not incl'd
+I œ47.78
+
+p47 vCM Portlink
+Lets the PF talk to an Atari ST/TT
+Portalink is a powerful data-trfr pgm b/t the PF
+and the Atari ST/TT. Portalink is easy to use & has various special
+features incl'g:
+>Two-way trfr
+>All kinds of files (.dat .txt)
+>No additional pgm'g needed for the PF
+>Supports the HDD & drive A of the PF
+>Rename while trfr'g files
+>Works w/parallel interface
+>Trfr cable incl'd
+I œ60.83

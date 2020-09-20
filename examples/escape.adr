@@ -1,0 +1,129 @@
+BS (backspace)
+
+CR (carriage return)
+
+ESC command shortening
+1st 2 chars must be the same
+omit &? from add'l commands
+only last command uppercase
+performed in order rec'd
+
+ESC E (reset)
+
+ESC Y (Fn display mode on)
+
+ESC Z (Fn display mode off)
+
+ESC 9 (clear side margins)
+
+ESC &a#L (left margin)
+
+ESC &a#M (right margin)
+
+ESC &d#D (enable auto underline)
+
+ESC &d@ (disable auto underline)
+
+ESC &k#G (line termination)
+
+ESC &l
+tells printer certain type
+of command will follow
+
+ESC &l0O (portrait)
+
+ESC &l1O (landscape)
+
+ESC &l#A (page size)
+
+ESC &l#D (lines per inch)
+
+ESC &l#E (top margin)
+
+ESC &l#F (text length)
+
+ESC &l#H (paper input control)
+
+ESC &l#P (page length in lines)
+
+ESC &l#U (long offset - decipoints)
+
+ESC &l#X (# of copies)
+
+ESC &l#Z (short offset - decipoints)
+
+ESC &s#C (word-wrap mode)
+
+ESC (ascii value 27)
+alerts printer that command follows:
+printer commands always
+begin with escape character
+
+ESC (s#B (stroke weight)
+
+ESC (s#H (font pitch)
+
+ESC (s#P (1ry spacing)
+
+ESC (s#S (roman/italic)
+
+ESC (s#T (typeface)
+
+ESC (s#V (1ry point size)
+
+ESC (#ID (1ry font)
+
+ESC (#X (select 1ry font)
+
+ESC (#@ (1ry font default)
+
+ESC *c#A (horiz rule - dots)
+
+ESC *c#B (vert rule - dots)
+
+ESC *c#E (specify character code)
+
+ESC *c#F (font & char control)
+
+ESC *c#G (pattern ID)
+
+ESC *c#H (horiz rule - deci-pts)
+
+ESC *c#P (print rule/pattern)
+
+ESC *c#V (vert rule - deci-pts)
+
+ESC *f#X (macro control)
+
+ESC *f#Y (macro ID)
+
+ESC = (half-line feed)
+
+FF (form feed)
+
+HT (horizontal tab)
+
+LF (line feed)
+
+PCL - printer control lingo
+control commands = escape sequences
+embedded in document
+
+SI (shift in)
+
+SO (shift out)
+
+SP (space)
+
+Upper/lowercase sensitivity
+Uppercase terminates escape sequence
+
+# (pound sign)
+value to be inserted
+
+)
+
+SP (space)
+
+Upper/lowercase sensitivity
+Upperca
