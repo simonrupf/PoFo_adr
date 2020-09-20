@@ -1,9 +1,4 @@
-use std::{
-    env::args,
-    fs,
-    io::stdout,
-    process::exit,
-};
+use std::{env::args, fs, io::stdout, process::exit};
 
 use chrono::Local;
 
@@ -14,12 +9,11 @@ use crossterm::{
 
 use tui::{
     backend::{Backend, CrosstermBackend},
-    Frame,
     layout::Rect,
     style::{Color, Style},
     text::{Span, Text},
-    Terminal,
     widgets::{Block, Borders, List, ListItem, ListState, Paragraph},
+    Frame, Terminal,
 };
 
 struct Adresses<'a> {
@@ -32,12 +26,15 @@ struct Adresses<'a> {
 impl<'a> Adresses<'a> {
     pub fn new(path: String, content: &'a String) -> Adresses<'a> {
         // content can be zero terminated and ends in a final CR+LF+CR+LF to be trimmed, before we split on that pattern
-        let addresses: Vec<&str> = content.trim_matches('\0').trim().split("\r\n\r\n").collect();
-        let headers: Vec<ListItem> = addresses.iter().map(|address| {
-            ListItem::new(
-                address.split("\r\n").nth(0).unwrap()
-            )
-        }).collect();
+        let addresses: Vec<&str> = content
+            .trim_matches('\0')
+            .trim()
+            .split("\r\n\r\n")
+            .collect();
+        let headers: Vec<ListItem> = addresses
+            .iter()
+            .map(|address| ListItem::new(address.split("\r\n").nth(0).unwrap()))
+            .collect();
         let state = ListState::default();
         Adresses {
             path,
@@ -55,11 +52,21 @@ impl<'a> Adresses<'a> {
 
         let counter = format!(" #{} ", self.headers.len());
         let counter_len = counter.len() as u16;
-        let counter_size = Rect::new(size.x + size.width - counter_len - 2, size.y, counter_len, 1);
+        let counter_size = Rect::new(
+            size.x + size.width - counter_len - 2,
+            size.y,
+            counter_len,
+            1,
+        );
         let counter_box = Paragraph::new(Span::raw(counter));
 
         let datetime = format!(" {} ", Local::now().format("%a %d %b %y %R"));
-        let datetime_size = Rect::new(size.x + 2, size.y + size.height - 1, datetime.len() as u16, 1);
+        let datetime_size = Rect::new(
+            size.x + 2,
+            size.y + size.height - 1,
+            datetime.len() as u16,
+            1,
+        );
         let datetime_box = Paragraph::new(Span::raw(datetime));
 
         f.render_widget(block, size);
@@ -79,15 +86,15 @@ impl<'a> Adresses<'a> {
     }
 
     pub fn draw_selected<B: Backend>(&mut self, f: &mut Frame<B>) {
-        let address = Paragraph::new(Text::from(self.addresses[
-            match self.state.selected() {
+        let address = Paragraph::new(Text::from(
+            self.addresses[match self.state.selected() {
                 Some(i) => i,
                 None => {
                     self.state.select(Some(0));
                     0
-                },
-            }
-        ]));
+                }
+            }],
+        ));
         let inner_size = self.draw_block(f);
         f.render_widget(address, inner_size);
     }
@@ -100,7 +107,7 @@ impl<'a> Adresses<'a> {
                 } else {
                     i + 1
                 }
-            },
+            }
             None => 0,
         };
         self.state.select(Some(i));
@@ -114,7 +121,7 @@ impl<'a> Adresses<'a> {
                 } else {
                     i - 1
                 }
-            },
+            }
             None => 0,
         };
         self.state.select(Some(i));
@@ -164,14 +171,16 @@ fn main() {
                     _ => continue,
                 }
             }
-            terminal.draw(|f| {
-                // mode might have changed, check it again
-                if is_list_mode {
-                    addresses.draw_list(f);
-                } else {
-                    addresses.draw_selected(f);
-                }
-            }).unwrap();
+            terminal
+                .draw(|f| {
+                    // mode might have changed, check it again
+                    if is_list_mode {
+                        addresses.draw_list(f);
+                    } else {
+                        addresses.draw_selected(f);
+                    }
+                })
+                .unwrap();
         }
     }
 
