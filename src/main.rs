@@ -55,7 +55,7 @@ impl<'a> Adresses<'a> {
         let counter = format!(" #{} ", self.headers.len());
         let counter_len = counter.len() as u16;
         let counter_size = Rect::new(
-            size.x + size.width - counter_len - 2,
+            size.x + size.width - counter_len - 1,
             size.y,
             counter_len,
             1,
@@ -64,7 +64,7 @@ impl<'a> Adresses<'a> {
 
         let datetime = format!(" {} ", Local::now().format("%a %d %b %y %R"));
         let datetime_size = Rect::new(
-            size.x + 2,
+            size.x + 1,
             size.y + size.height - 1,
             datetime.len() as u16,
             1,
