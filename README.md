@@ -37,7 +37,7 @@ Build
 The application is written in [Rust 🦀](https://www.rust-lang.org/) and you need
 to have `cargo` and `rustc` installed to build it. Example:
 
-```shell
+```text
 $ make help
 Usage: make <target(s)>
 
