@@ -5,6 +5,8 @@ use std::{
     process::exit,
 };
 
+use chrono::Local;
+
 use crossterm::{
     event::{self, Event, KeyCode},
     terminal::{disable_raw_mode, enable_raw_mode},
@@ -50,13 +52,19 @@ impl<'a> Adresses<'a> {
         let block = Block::default()
             .title(format!(" {} ", self.path))
             .borders(Borders::ALL);
+
         let counter = format!(" #{} ", self.headers.len());
         let counter_len = counter.len() as u16;
-        let counter_box = Paragraph::new(Span::raw(counter));
         let counter_size = Rect::new(size.x + size.width - counter_len - 2, size.y, counter_len, 1);
+        let counter_box = Paragraph::new(Span::raw(counter));
+
+        let datetime = format!(" {} ", Local::now().format("%a %d %b %y %R"));
+        let datetime_size = Rect::new(size.x + 2, size.y + size.height - 1, datetime.len() as u16, 1);
+        let datetime_box = Paragraph::new(Span::raw(datetime));
 
         f.render_widget(block, size);
         f.render_widget(counter_box, counter_size);
+        f.render_widget(datetime_box, datetime_size);
 
         // inner size of block, with 1 char margin on the left
         Rect::new(size.x + 2, size.y + 1, size.width - 3, size.height - 2)
