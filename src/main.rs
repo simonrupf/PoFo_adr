@@ -24,7 +24,7 @@ struct Adresses<'a> {
 }
 
 impl<'a> Adresses<'a> {
-    pub fn new(path: String, content: &'a String) -> Adresses<'a> {
+    pub fn new(path: String, content: &'a str) -> Adresses<'a> {
         // content can be zero terminated and ends in a final CR+LF+CR+LF to be trimmed, before we split on that pattern
         let addresses: Vec<&str> = content
             .trim_matches('\0')
@@ -33,7 +33,7 @@ impl<'a> Adresses<'a> {
             .collect();
         let headers: Vec<ListItem> = addresses
             .iter()
-            .map(|address| ListItem::new(address.split("\r\n").nth(0).unwrap()))
+            .map(|address| ListItem::new(address.split("\r\n").next().unwrap()))
             .collect();
         let state = ListState::default();
         Adresses {
