@@ -82,7 +82,10 @@ impl<'a> Adresses<'a> {
         let address = Paragraph::new(Text::from(self.addresses[
             match self.state.selected() {
                 Some(i) => i,
-                None => 0,
+                None => {
+                    self.state.select(Some(0));
+                    0
+                },
             }
         ]));
         let inner_size = self.draw_block(f);
@@ -145,26 +148,24 @@ fn main() {
 
     loop {
         if let Event::Key(key) = event::read().unwrap() {
-            match key.code {
-                KeyCode::Esc => {
-                    if is_list_mode {
-                        break;
-                    } else {
-                        is_list_mode = true;
-                    }
-                },
-                KeyCode::Enter => {
-                    if is_list_mode {
-                        is_list_mode = false;
-                    } else {
-                        continue;
-                    }
-                },
-                KeyCode::Down => addresses.next(),
-                KeyCode::Up => addresses.previous(),
-                _ => {}
+            if is_list_mode {
+                match key.code {
+                    KeyCode::Esc => break,
+                    KeyCode::Enter => is_list_mode = !is_list_mode,
+                    KeyCode::Down => addresses.next(),
+                    KeyCode::Up => addresses.previous(),
+                    _ => continue,
+                }
+            } else {
+                match key.code {
+                    KeyCode::Esc => is_list_mode = !is_list_mode,
+                    KeyCode::PageDown => addresses.next(),
+                    KeyCode::PageUp => addresses.previous(),
+                    _ => continue,
+                }
             }
             terminal.draw(|f| {
+                // mode might have changed, check it again
                 if is_list_mode {
                     addresses.draw_list(f);
                 } else {
