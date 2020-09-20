@@ -13,9 +13,10 @@ use crossterm::{
 use tui::{
     backend::CrosstermBackend,
     layout::Rect,
-    text::{Span, Spans, Text},
+    style::{Color, Style},
+    text::Span,
     Terminal,
-    widgets::{Block, Borders, Paragraph},
+    widgets::{Block, Borders, List, ListItem, ListState, Paragraph},
 };
 
 fn main() {
@@ -36,13 +37,13 @@ fn main() {
         }
     };
     let addresses: Vec<&str> = content.split("\r\n\r\n").collect();
-    let headers: Vec<Spans> = addresses.iter().map(|address| {
-        Spans::from(
-            Span::raw(
-                address.split("\r\n").nth(0).unwrap().to_string()
-            )
+    let headers: Vec<ListItem> = addresses.iter().map(|address| {
+        ListItem::new(
+            address.split("\r\n").nth(0).unwrap()
         )
     }).collect();
+    let mut header_selection = ListState::default();
+    header_selection.select(Some(0));
 
     enable_raw_mode().unwrap(); // prevent key presses reaching stdout
     let stdout = stdout();
@@ -54,16 +55,18 @@ fn main() {
         let block = Block::default()
             .title(format!(" {} ", path))
             .borders(Borders::ALL);
-        let content_box = Paragraph::new(Text::from(headers));
+        let items = List::new(headers)
+            .style(Style::default().fg(Color::White))
+            .highlight_style(Style::default().fg(Color::Black).bg(Color::White));
         let counter = format!(" #{} ", addresses.len());
         let counter_len = counter.len() as u16;
-        let counter_box = Paragraph::new(Text::from(vec![Spans::from(Span::raw(counter))]));
+        let counter_box = Paragraph::new(Span::raw(counter));
 
         let inner_size = Rect::new(size.x + 2, size.y + 1, size.width - 3, size.height - 2);
         let counter_size = Rect::new(size.x + size.width - counter_len - 2, size.y, counter_len, 1);
 
         f.render_widget(block, size);
-        f.render_widget(content_box, inner_size);
+        f.render_stateful_widget(items, inner_size, &mut header_selection);
         f.render_widget(counter_box, counter_size);
     }).unwrap();
 
