@@ -1,6 +1,8 @@
-use std::{env::args, fs, io::stdout, process::exit};
+use std::{env::args, fs::read, io::stdout, process::exit};
 
 use chrono::Local;
+
+use codepage_437::{CP437_CONTROL, BorrowFromCp437};
 
 use crossterm::{
     event::{self, Event, KeyCode},
@@ -137,7 +139,7 @@ fn main() {
         }
     };
 
-    let content = match fs::read_to_string(path.clone()) {
+    let dos_content = match read(path.clone()) {
         Ok(content) => content,
         Err(error) => {
             eprintln!("Error reading file {}", path);
@@ -145,7 +147,8 @@ fn main() {
             exit(254);
         }
     };
-    let mut addresses = Adresses::new(path, &content);
+    let utf8_content = String::borrow_from_cp437(&dos_content, &CP437_CONTROL);
+    let mut addresses = Adresses::new(path, &utf8_content);
     let mut is_list_mode = true;
 
     enable_raw_mode().unwrap(); // prevent key presses reaching stdout
