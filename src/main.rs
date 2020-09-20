@@ -15,7 +15,7 @@ use tui::{
     Frame,
     layout::Rect,
     style::{Color, Style},
-    text::Span,
+    text::{Span, Text},
     Terminal,
     widgets::{Block, Borders, List, ListItem, ListState, Paragraph},
 };
@@ -65,6 +65,29 @@ impl<'a> Adresses<'a> {
         f.render_widget(counter_box, counter_size);
     }
 
+    pub fn draw_selected<B: Backend>(&mut self, f: &mut Frame<B>) {
+        let size = f.size();
+        let block = Block::default()
+            .title(format!(" {} ", self.path))
+            .borders(Borders::ALL);
+        let address = Paragraph::new(Text::from(self.addresses[
+            match self.state.selected() {
+                Some(i) => i,
+                None => 0,
+            }
+        ]));
+        let counter = format!(" #{} ", self.headers.len());
+        let counter_len = counter.len() as u16;
+        let counter_box = Paragraph::new(Span::raw(counter));
+
+        let inner_size = Rect::new(size.x + 2, size.y + 1, size.width - 3, size.height - 2);
+        let counter_size = Rect::new(size.x + size.width - counter_len - 2, size.y, counter_len, 1);
+
+        f.render_widget(block, size);
+        f.render_widget(address, inner_size);
+        f.render_widget(counter_box, counter_size);
+    }
+
     pub fn next(&mut self) {
         let i = match self.state.selected() {
             Some(i) => {
@@ -73,7 +96,7 @@ impl<'a> Adresses<'a> {
                 } else {
                     i + 1
                 }
-            }
+            },
             None => 0,
         };
         self.state.select(Some(i));
@@ -87,7 +110,7 @@ impl<'a> Adresses<'a> {
                 } else {
                     i - 1
                 }
-            }
+            },
             None => 0,
         };
         self.state.select(Some(i));
@@ -112,6 +135,8 @@ fn main() {
         }
     };
     let mut addresses = Adresses::new(path, &content);
+    let mut is_list_mode = true;
+
     enable_raw_mode().unwrap(); // prevent key presses reaching stdout
     let mut terminal = Terminal::new(CrosstermBackend::new(stdout())).unwrap();
     terminal.clear().unwrap();
@@ -120,12 +145,31 @@ fn main() {
     loop {
         if let Event::Key(key) = event::read().unwrap() {
             match key.code {
-                KeyCode::Esc => break,
+                KeyCode::Esc => {
+                    if is_list_mode {
+                        break;
+                    } else {
+                        is_list_mode = true;
+                    }
+                },
+                KeyCode::Enter => {
+                    if is_list_mode {
+                        is_list_mode = false;
+                    } else {
+                        continue;
+                    }
+                },
                 KeyCode::Down => addresses.next(),
                 KeyCode::Up => addresses.previous(),
                 _ => {}
             }
-            terminal.draw(|f| addresses.draw_list(f)).unwrap();
+            terminal.draw(|f| {
+                if is_list_mode {
+                    addresses.draw_list(f);
+                } else {
+                    addresses.draw_selected(f);
+                }
+            }).unwrap();
         }
     }
 
