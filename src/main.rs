@@ -45,47 +45,40 @@ impl<'a> Adresses<'a> {
         }
     }
 
-    pub fn draw_list<B: Backend>(&mut self, f: &mut Frame<B>) {
+    fn draw_block<B: Backend>(&mut self, f: &mut Frame<B>) -> Rect {
         let size = f.size();
         let block = Block::default()
             .title(format!(" {} ", self.path))
             .borders(Borders::ALL);
-        let items = List::new(self.headers.clone())
-            .style(Style::default().fg(Color::White))
-            .highlight_style(Style::default().fg(Color::Black).bg(Color::White));
         let counter = format!(" #{} ", self.headers.len());
         let counter_len = counter.len() as u16;
         let counter_box = Paragraph::new(Span::raw(counter));
-
-        let inner_size = Rect::new(size.x + 2, size.y + 1, size.width - 3, size.height - 2);
         let counter_size = Rect::new(size.x + size.width - counter_len - 2, size.y, counter_len, 1);
 
         f.render_widget(block, size);
-        f.render_stateful_widget(items, inner_size, &mut self.state);
         f.render_widget(counter_box, counter_size);
+
+        // inner size of block, with 1 char margin on the left
+        Rect::new(size.x + 2, size.y + 1, size.width - 3, size.height - 2)
+    }
+
+    pub fn draw_list<B: Backend>(&mut self, f: &mut Frame<B>) {
+        let items = List::new(self.headers.clone())
+            .style(Style::default().fg(Color::White))
+            .highlight_style(Style::default().fg(Color::Black).bg(Color::White));
+        let inner_size = self.draw_block(f);
+        f.render_stateful_widget(items, inner_size, &mut self.state);
     }
 
     pub fn draw_selected<B: Backend>(&mut self, f: &mut Frame<B>) {
-        let size = f.size();
-        let block = Block::default()
-            .title(format!(" {} ", self.path))
-            .borders(Borders::ALL);
         let address = Paragraph::new(Text::from(self.addresses[
             match self.state.selected() {
                 Some(i) => i,
                 None => 0,
             }
         ]));
-        let counter = format!(" #{} ", self.headers.len());
-        let counter_len = counter.len() as u16;
-        let counter_box = Paragraph::new(Span::raw(counter));
-
-        let inner_size = Rect::new(size.x + 2, size.y + 1, size.width - 3, size.height - 2);
-        let counter_size = Rect::new(size.x + size.width - counter_len - 2, size.y, counter_len, 1);
-
-        f.render_widget(block, size);
+        let inner_size = self.draw_block(f);
         f.render_widget(address, inner_size);
-        f.render_widget(counter_box, counter_size);
     }
 
     pub fn next(&mut self) {
