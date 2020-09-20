@@ -14,7 +14,7 @@ use tui::{
     layout::Rect,
     style::{Color, Style},
     text::{Span, Text},
-    widgets::{Block, Borders, List, ListItem, ListState, Paragraph},
+    widgets::{Block, Borders, BorderType, List, ListItem, ListState, Paragraph},
     Frame, Terminal,
 };
 
@@ -50,7 +50,8 @@ impl<'a> Adresses<'a> {
         let size = f.size();
         let block = Block::default()
             .title(format!(" {} ", self.path))
-            .borders(Borders::ALL);
+            .borders(Borders::ALL)
+            .border_type(BorderType::Double);
 
         let counter = format!(" #{} ", self.headers.len());
         let counter_len = counter.len() as u16;
