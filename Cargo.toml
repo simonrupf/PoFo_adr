@@ -1,19 +1,46 @@
 [package]
 name = "pofo_adr"
-version = "0.1.0"
+description = "command line reader for the Atari Portfolio address file format."
+version = "0.2.0"
 authors = ["Simon Rupf <simon@rupf.net>"]
-edition = "2018"
+edition = "2021"
 license = "GPL-3.0"
+repository = "https://github.com/simonrupf/convert2json"
+keywords = ["cli", "atari"]
+categories = ["command-line-utilities", "encoding"]
+rust-version = "1.66"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-chrono = "0.4.13"
+chrono = "0.4.31"
 codepage-437 = "0.1.0"
-crossterm = "0.17.7"
-tui = { version = "0.10.0", default-features = false, features = ['crossterm'] }
+crossterm = "=0.25.0" # pin to the version depended on by tui
+tui = { version = "0.19.0", default-features = false, features = ['crossterm'] }
 
 [profile.release]
 opt-level = 'z'  # Optimize for size.
 lto = true
 codegen-units = 1
+strip = true
+
+[package.metadata.deb]
+maintainer = "Simon Rupf <simon@rupf.net>"
+license-file = ["LICENSE.md", "0"]
+extended-description-file = "README.md"
+section = "contrib/utils"
+priority = "optional"
+assets = [
+    ["target/x86_64-unknown-linux-musl/release/pofo_adr", "usr/bin/", "755" ],
+    ["CHANGELOG.md", "usr/share/doc/pofo_adr/", "644" ],
+    ["LICENSE.md", "usr/share/doc/pofo_adr/", "644" ],
+    ["README.md", "usr/share/doc/pofo_adr/", "644" ],
+]
+
+[package.metadata.generate-rpm]
+assets = [
+    { source = "target/x86_64-unknown-linux-musl/release/pofo_adr", dest = "/usr/bin/pofo_adr", mode = "755" },
+    { source = "CHANGELOG.md", dest = "/usr/share/doc/pofo_adr/CHANGELOG.md", mode = "644", doc = true },
+    { source = "LICENSE.md", dest = "/usr/share/doc/pofo_adr/LICENSE.md", mode = "644", doc = true },
+    { source = "README.md", dest = "/usr/share/doc/pofo_adr/README.md", mode = "644", doc = true },
+]

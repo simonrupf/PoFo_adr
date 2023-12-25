@@ -1,0 +1,34 @@
+name: Rust test & lint
+permissions:
+  contents: read
+  checks: write
+on:
+  push:
+    branches: '*'
+  pull_request:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Install Rust
+      run: |
+        rustup toolchain install 1.70.0 --profile minimal --no-self-update --component rustfmt clippy
+        rustup default 1.70.0
+    - name: Cache cargo registry
+      uses: actions/cache@v3
+      with:
+        path: ~/.cargo/registry
+        key: ${{ runner.os }}-cargo-registry-${{ hashFiles('**/Cargo.lock') }}
+    - name: Cache cargo build
+      uses: actions/cache@v3
+      with:
+        path: target
+        key: ${{ runner.os }}-cargo-build-target-${{ hashFiles('**/Cargo.lock') }}
+    - name: Execute all unit and integration tests and build examples
+      run: cargo test
+    - name: Check formatting of code and suggest improvements
+      run: cargo fmt -- --check
+    - name: Check for common mistakes and code improvements
+      run: cargo clippy --all-targets --all-features -- -D warnings

@@ -5,11 +5,10 @@ build: src/main.rs ## Build the binary for debug (default).
 
 release: src/main.rs ## Build the binary for release.
 	cargo build --release
-	strip target/release/pofo_adr
 
 lint: ## Run fmt & clippy on the code to come up with improvements.
 	cargo fmt
-	cargo clippy
+	cargo clippy --all-targets --all-features -- -D warnings
 
 help: ## Displays these usage instructions.
 	@echo "Usage: make <target(s)>"
