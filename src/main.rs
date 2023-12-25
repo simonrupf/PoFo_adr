@@ -83,11 +83,11 @@ impl<'a> Addresses<'a> {
     }
 
     pub fn draw<B: Backend>(&mut self, f: &mut Frame<B>) {
+        let inner_size = self.draw_block(f);
         if self.is_list_mode {
             let items = List::new(self.headers.clone())
                 .style(Style::default().fg(Color::White))
                 .highlight_style(Style::default().fg(Color::Black).bg(Color::White));
-            let inner_size = self.draw_block(f);
             f.render_stateful_widget(items, inner_size, &mut self.state);
         } else {
             let address = Paragraph::new(Text::from(
@@ -99,7 +99,6 @@ impl<'a> Addresses<'a> {
                     }
                 }],
             ));
-            let inner_size = self.draw_block(f);
             f.render_widget(address, inner_size);
         }
     }
