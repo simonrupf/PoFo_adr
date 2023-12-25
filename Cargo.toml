@@ -15,7 +15,7 @@ rust-version = "1.66"
 [dependencies]
 chrono = "0.4.31"
 codepage-437 = "0.1.0"
-crossterm = "=0.25.0" # pin to the version depended on by tui
+crossterm = "=0.27.0" # pin to the version depended on by tui
 tui = { version = "0.19.0", default-features = false, features = ['crossterm'] }
 
 [profile.release]
