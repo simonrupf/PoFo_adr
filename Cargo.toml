@@ -13,7 +13,7 @@ rust-version = "1.66"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-chrono = "0.4.31"
+chrono = "0.4.33"
 codepage-437 = "0.1.0"
 crossterm = "=0.25.0" # pin to the version depended on by tui
 tui = { version = "0.19.0", default-features = false, features = ['crossterm'] }
