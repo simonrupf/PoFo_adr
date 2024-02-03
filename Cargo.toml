@@ -1,7 +1,7 @@
 [package]
 name = "pofo_adr"
 description = "command line reader for the Atari Portfolio address file format."
-version = "0.2.1"
+version = "0.2.2"
 authors = ["Simon Rupf <simon@rupf.net>"]
 edition = "2021"
 license = "GPL-3.0"
@@ -15,8 +15,8 @@ rust-version = "1.66"
 [dependencies]
 chrono = "0.4.33"
 codepage-437 = "0.1.0"
-crossterm = "=0.25.0" # pin to the version depended on by tui
-tui = { version = "0.19.0", default-features = false, features = ['crossterm'] }
+crossterm = { version = "=0.27.0", default-features = false, features = ["windows", "events"] } # pin to the version depended on by tui
+ratatui = { version = "0.26.0", default-features = false, features = ['crossterm'] }
 
 [profile.release]
 opt-level = 'z'  # Optimize for size.

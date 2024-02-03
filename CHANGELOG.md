@@ -1,6 +1,11 @@
 Change Log of Atari Portfolio address file reader
 =================================================
 
+Version 0.2.2 / 2024-02-03
+--------------------------
+- switched from tui 0.19.0 (unmaintained) to ratatui 0.26.0 (maintained fork)
+- bumped crossterm from 0.25.0 to 0.27.0
+
 Version 0.2.1 / 2024-02-03
 --------------------------
 - bumped chrono from 0.4.31 to 0.4.33

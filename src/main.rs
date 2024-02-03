@@ -9,8 +9,8 @@ use crossterm::{
     terminal::{disable_raw_mode, enable_raw_mode},
 };
 
-use tui::{
-    backend::{Backend, CrosstermBackend},
+use ratatui::{
+    backend::CrosstermBackend,
     layout::Rect,
     style::{Color, Style},
     text::{Span, Text},
@@ -48,7 +48,7 @@ impl<'a> Addresses<'a> {
         }
     }
 
-    fn draw_block<B: Backend>(&mut self, f: &mut Frame<B>) -> Rect {
+    fn draw_block(&mut self, f: &mut Frame) -> Rect {
         let size = f.size();
         let block = Block::default()
             .title(format!(" {} ", self.path))
@@ -82,7 +82,7 @@ impl<'a> Addresses<'a> {
         Rect::new(size.x + 2, size.y + 1, size.width - 3, size.height - 2)
     }
 
-    pub fn draw<B: Backend>(&mut self, f: &mut Frame<B>) {
+    pub fn draw(&mut self, f: &mut Frame) {
         let inner_size = self.draw_block(f);
         if self.is_list_mode {
             let items = List::new(self.headers.clone())

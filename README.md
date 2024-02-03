@@ -48,43 +48,67 @@ lint            Run fmt & clippy on the code to come up with improvements.
 help            Displays these usage instructions.
 $ make release
 cargo build --release
-   Compiling libc v0.2.77
-   Compiling memchr v2.3.3
+   Compiling libc v0.2.151
+   Compiling ryu v1.0.5
+   Compiling autocfg v1.1.0
+   Compiling proc-macro2 v1.0.71
+   Compiling cfg-if v1.0.0
    Compiling byteorder v1.3.4
+   Compiling memchr v2.3.3
+   Compiling unicode-ident v1.0.12
+   Compiling serde v1.0.116
+   Compiling rustversion v1.0.14
+   Compiling quote v1.0.33
+   Compiling log v0.4.11
+   Compiling version_check v0.9.4
+   Compiling regex-automata v0.1.9
+   Compiling lock_api v0.4.11
+   Compiling ahash v0.8.7
    Compiling lazy_static v1.4.0
    Compiling cfg-if v0.1.10
-   Compiling serde v1.0.116
-   Compiling autocfg v1.0.1
-   Compiling ryu v1.0.5
-   Compiling log v0.4.11
-   Compiling smallvec v1.4.2
-   Compiling scopeguard v1.1.0
-   Compiling itoa v0.4.6
-   Compiling arc-swap v0.4.7
-   Compiling bitflags v1.2.1
-   Compiling cassowary v0.3.0
-   Compiling unicode-segmentation v1.6.0
-   Compiling unicode-width v0.1.8
-   Compiling lock_api v0.3.4
-   Compiling num-traits v0.2.12
-   Compiling num-integer v0.1.43
+   Compiling parking_lot_core v0.9.9
+   Compiling signal-hook v0.3.17
    Compiling csv-core v0.1.10
-   Compiling signal-hook-registry v1.2.1
-   Compiling parking_lot_core v0.7.2
-   Compiling mio v0.7.0
-   Compiling time v0.1.44
-   Compiling regex-automata v0.1.9
-   Compiling parking_lot v0.10.2
-   Compiling signal-hook v0.1.16
-   Compiling crossterm v0.17.7
-   Compiling chrono v0.4.15
-   Compiling tui v0.10.0
+   Compiling signal-hook-registry v1.4.1
+   Compiling once_cell v1.19.0
+   Compiling syn v1.0.109
+   Compiling itoa v0.4.6
+   Compiling scopeguard v1.1.0
+   Compiling smallvec v1.11.2
+   Compiling zerocopy v0.7.32
+   Compiling mio v0.8.10
+   Compiling syn v2.0.43
+   Compiling num-traits v0.2.12
+   Compiling heck v0.4.1
+   Compiling allocator-api2 v0.2.16
+   Compiling paste v1.0.14
+   Compiling hashbrown v0.14.3
+   Compiling signal-hook-mio v0.2.3
+   Compiling parking_lot v0.12.1
    Compiling bstr v0.2.13
+   Compiling castaway v0.2.2
+   Compiling either v1.9.0
    Compiling csv v1.1.3
+   Compiling static_assertions v1.1.0
+   Compiling itoa v1.0.10
+   Compiling bitflags v2.4.2
+   Compiling crossterm v0.27.0
    Compiling codepage-437 v0.1.0
-   Compiling pofo_adr v0.1.0 (/home/elrido/Projekte/pofo_adr)
-    Finished release [optimized] target(s) in 26.47s
-strip target/release/pofo_adr
+   Compiling compact_str v0.7.1
+   Compiling itertools v0.12.1
+   Compiling strum_macros v0.26.1
+   Compiling lru v0.12.2
+   Compiling unicode-width v0.1.8
+   Compiling indoc v2.0.4
+   Compiling iana-time-zone v0.1.58
+   Compiling unicode-segmentation v1.10.1
+   Compiling cassowary v0.3.0
+   Compiling chrono v0.4.33
+   Compiling strum v0.26.1
+   Compiling stability v0.1.1
+   Compiling ratatui v0.26.0
+   Compiling pofo_adr v0.2.2 (Projects/PoFo_adr)
+    Finished release [optimized] target(s) in 42.98s
 $ target/release/pofo_adr examples/ez-ref.adr
 ╔ examples/ez-ref.adr ═══════════════════════════════════════════════════ #122 ╗
 ║ ABACUS BOOKS  (616)698-0330                                                  ║
