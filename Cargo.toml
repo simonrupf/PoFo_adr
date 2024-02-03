@@ -1,14 +1,14 @@
 [package]
 name = "pofo_adr"
 description = "command line reader for the Atari Portfolio address file format."
-version = "0.2.2"
+version = "0.2.3"
 authors = ["Simon Rupf <simon@rupf.net>"]
 edition = "2021"
 license = "GPL-3.0"
 repository = "https://github.com/simonrupf/convert2json"
 keywords = ["cli", "atari"]
 categories = ["command-line-utilities", "encoding"]
-rust-version = "1.66"
+rust-version = "1.72"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 

@@ -1,6 +1,11 @@
 Change Log of Atari Portfolio address file reader
 =================================================
 
+Version 0.2.3 / 2024-02-03
+--------------------------
+- bumped rust version to 1.72 to gain access to stable feature stdsimd for
+  aarch64 builds, like on MacOS
+
 Version 0.2.2 / 2024-02-03
 --------------------------
 - switched from tui 0.19.0 (unmaintained) to ratatui 0.26.0 (maintained fork)
