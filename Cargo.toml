@@ -1,7 +1,7 @@
 [package]
 name = "pofo_adr"
 description = "command line reader for the Atari Portfolio address file format."
-version = "0.2.3"
+version = "0.2.4"
 authors = ["Simon Rupf <simon@rupf.net>"]
 edition = "2021"
 license = "GPL-3.0"
