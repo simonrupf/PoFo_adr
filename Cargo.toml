@@ -16,7 +16,7 @@ rust-version = "1.72"
 chrono = "0.4.33"
 codepage-437 = "0.1.0"
 crossterm = { version = "=0.27.0", default-features = false, features = ["windows", "events"] } # pin to the version depended on by tui
-ratatui = { version = "0.26.0", default-features = false, features = ['crossterm'] }
+ratatui = { version = "0.26.1", default-features = false, features = ['crossterm'] }
 
 [profile.release]
 opt-level = 'z'  # Optimize for size.
