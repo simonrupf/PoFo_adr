@@ -1,6 +1,10 @@
 Change Log of Atari Portfolio address file reader
 =================================================
 
+Version 0.2.5 / 2024-03-02
+--------------------------
+- bumped rust version to 1.74 for clap 4.5.1, used in rpm packaging
+
 Version 0.2.4 / 2024-03-02
 --------------------------
 - bumped chrono from 0.4.33 to 0.4.34
