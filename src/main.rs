@@ -49,7 +49,7 @@ impl<'a> Addresses<'a> {
     }
 
     fn draw_block(&mut self, f: &mut Frame) -> Rect {
-        let size = f.size();
+        let area = f.area();
         let block = Block::default()
             .title(format!(" {} ", self.path))
             .borders(Borders::ALL)
@@ -58,8 +58,8 @@ impl<'a> Addresses<'a> {
         let counter = format!(" #{} ", self.headers.len());
         let counter_len = counter.len() as u16;
         let counter_size = Rect::new(
-            size.x + size.width - counter_len - 1,
-            size.y,
+            area.x + area.width - counter_len - 1,
+            area.y,
             counter_len,
             1,
         );
@@ -67,19 +67,19 @@ impl<'a> Addresses<'a> {
 
         let datetime = format!(" {} ", Local::now().format("%a %d %b %y %R"));
         let datetime_size = Rect::new(
-            size.x + 1,
-            size.y + size.height - 1,
+            area.x + 1,
+            area.y + area.height - 1,
             datetime.len() as u16,
             1,
         );
         let datetime_box = Paragraph::new(Span::raw(datetime));
 
-        f.render_widget(block, size);
+        f.render_widget(block, area);
         f.render_widget(counter_box, counter_size);
         f.render_widget(datetime_box, datetime_size);
 
         // inner size of block, with 1 char margin on the left
-        Rect::new(size.x + 2, size.y + 1, size.width - 3, size.height - 2)
+        Rect::new(area.x + 2, area.y + 1, area.width - 3, area.height - 2)
     }
 
     pub fn draw(&mut self, f: &mut Frame) {
