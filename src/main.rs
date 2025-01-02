@@ -47,7 +47,7 @@ impl<'a> Addresses<'a> {
     fn draw_block(&mut self, f: &mut Frame) -> Rect {
         let area = f.area();
         let block = Block::default()
-            .title(format!(" {} ", self.path))
+            .title(format!("═ {} ", self.path))
             .borders(Borders::ALL)
             .border_type(BorderType::Double);
 
@@ -64,7 +64,7 @@ impl<'a> Addresses<'a> {
         let counter = format!(" #{} ", number);
         let counter_len = counter.len() as u16;
         let counter_size = Rect::new(
-            area.x + area.width - counter_len - 1,
+            area.x + area.width - counter_len - 2,
             area.y,
             counter_len,
             1,
@@ -73,7 +73,7 @@ impl<'a> Addresses<'a> {
 
         let datetime = format!(" {} ", Local::now().format("%a %d %b %y %R"));
         let datetime_size = Rect::new(
-            area.x + 1,
+            area.x + 2,
             area.y + area.height - 1,
             datetime.len() as u16,
             1,
