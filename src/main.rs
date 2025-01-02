@@ -51,7 +51,17 @@ impl<'a> Addresses<'a> {
             .borders(Borders::ALL)
             .border_type(BorderType::Double);
 
-        let counter = format!(" #{} ", self.headers.len());
+        let number;
+        if self.is_list_mode {
+            number = self.headers.len();
+        } else {
+            number = match self.state.selected() {
+                Some(i) => i + 1,
+                None => 1
+            }
+        }
+
+        let counter = format!(" #{} ", number);
         let counter_len = counter.len() as u16;
         let counter_size = Rect::new(
             area.x + area.width - counter_len - 1,
