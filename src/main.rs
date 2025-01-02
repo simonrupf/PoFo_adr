@@ -28,15 +28,11 @@ struct Addresses<'a> {
 
 impl<'a> Addresses<'a> {
     pub fn new(path: String, content: &'a str) -> Addresses<'a> {
-        // content can be zero terminated and ends in a final CR+LF+CR+LF to be trimmed, before we split on that pattern
-        let addresses: Vec<&str> = content
-            .trim_matches('\0')
-            .trim()
-            .split("\r\n\r\n")
-            .collect();
+        // content can be zero terminated and ends in a final LF+LF to be trimmed, before we split on that pattern
+        let addresses: Vec<&str> = content.trim_matches('\0').trim().split("\n\n").collect();
         let headers: Vec<ListItem> = addresses
             .iter()
-            .map(|address| ListItem::new(address.split("\r\n").next().unwrap()))
+            .map(|address| ListItem::new(address.split("\n").next().unwrap()))
             .collect();
         let state = ListState::default();
         Addresses {
@@ -166,7 +162,8 @@ fn main() {
                 exit(254);
             }
         };
-        utf8_content = String::borrow_from_cp437(&dos_content, &CP437_CONTROL);
+        utf8_content =
+            String::borrow_from_cp437(&dos_content, &CP437_CONTROL).replace("\r\n", "\n");
         addresses = Addresses::new(path, &utf8_content);
     }
 
