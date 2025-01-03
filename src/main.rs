@@ -14,13 +14,15 @@ use ratatui::{
     layout::Rect,
     style::{Color, Style},
     text::{Span, Text},
-    widgets::{Block, BorderType, Borders, List, ListItem, ListState, Paragraph},
+    widgets::{Block, BorderType, Borders, List, ListItem, ListState, Padding, Paragraph},
     Frame, Terminal,
 };
 
+const TAB_WIDTH: usize = 8;
+
 struct Addresses<'a> {
     path: String,
-    addresses: Vec<&'a str>,
+    addresses: Vec<Paragraph<'a>>,
     headers: Vec<ListItem<'a>>,
     is_list_mode: bool,
     state: ListState,
@@ -29,10 +31,35 @@ struct Addresses<'a> {
 impl<'a> Addresses<'a> {
     pub fn new(path: String, content: &'a str) -> Addresses<'a> {
         // content can be zero terminated and ends in a final LF+LF to be trimmed, before we split on that pattern
-        let addresses: Vec<&str> = content.trim_matches('\0').trim().split("\n\n").collect();
-        let headers: Vec<ListItem> = addresses
-            .iter()
-            .map(|address| ListItem::new(address.split("\n").next().unwrap()))
+        let block = Block::new()
+            .borders(Borders::TOP)
+            .padding(Padding::horizontal(1));
+        let mut headers: Vec<ListItem> = vec![];
+        let addresses: Vec<Paragraph> = content
+            .trim_matches('\0')
+            .trim()
+            .split("\n\n")
+            .map(|page| {
+                let mut header = String::new();
+                let mut address = String::new();
+                let mut lines = page.split('\n');
+
+                for column in lines.next().unwrap().split('\t') {
+                    pad_column_into(column, &mut header);
+                }
+                header.truncate(header.trim_end().len());
+                headers.push(ListItem::new(header));
+
+                for line in lines {
+                    for column in line.split('\t') {
+                        pad_column_into(column, &mut address);
+                    }
+                    address.truncate(address.trim_end().len());
+                    address.push('\n');
+                }
+                address.pop(); // trailing new line
+                Paragraph::new(Text::from(address)).block(block.clone())
+            })
             .collect();
         let state = ListState::default();
         Addresses {
@@ -51,17 +78,16 @@ impl<'a> Addresses<'a> {
             .borders(Borders::ALL)
             .border_type(BorderType::Double);
 
-        let number;
-        if self.is_list_mode {
-            number = self.headers.len();
+        let total = self.headers.len();
+        let counter = if self.is_list_mode {
+            format!(" #{total} ")
         } else {
-            number = match self.state.selected() {
+            let index = match self.state.selected() {
                 Some(i) => i + 1,
-                None => 1
-            }
-        }
-
-        let counter = format!(" #{} ", number);
+                None => 1,
+            };
+            format!(" {index} of #{total} ")
+        };
         let counter_len = counter.len() as u16;
         let counter_size = Rect::new(
             area.x + area.width - counter_len - 2,
@@ -71,7 +97,7 @@ impl<'a> Addresses<'a> {
         );
         let counter_box = Paragraph::new(Span::raw(counter));
 
-        let datetime = format!(" {} ", Local::now().format("%a %d %b %y %R"));
+        let datetime = Local::now().format(" %a %d %b %y %R ").to_string();
         let datetime_size = Rect::new(
             area.x + 2,
             area.y + area.height - 1,
@@ -89,23 +115,30 @@ impl<'a> Addresses<'a> {
     }
 
     pub fn draw(&mut self, f: &mut Frame) {
-        let inner_size = self.draw_block(f);
+        let inner_area = self.draw_block(f);
         if self.is_list_mode {
             let items = List::new(self.headers.clone())
                 .style(Style::default().fg(Color::White))
                 .highlight_style(Style::default().fg(Color::Black).bg(Color::White));
-            f.render_stateful_widget(items, inner_size, &mut self.state);
+            f.render_stateful_widget(items, inner_area, &mut self.state);
         } else {
-            let address = Paragraph::new(Text::from(
-                self.addresses[match self.state.selected() {
-                    Some(i) => i,
-                    None => {
-                        self.state.select(Some(0));
-                        0
-                    }
-                }],
-            ));
-            f.render_widget(address, inner_size);
+            let index = match self.state.selected() {
+                Some(i) => i,
+                None => {
+                    self.state.select(Some(0));
+                    0
+                }
+            };
+            let header = List::new([self.headers[index].clone()]);
+            f.render_widget(header, inner_area.rows().next().unwrap());
+
+            let remaining_area = Rect::new(
+                inner_area.x - 1,
+                inner_area.y + 1,
+                inner_area.width + 1,
+                inner_area.height - 1,
+            );
+            f.render_widget(self.addresses[index].clone(), remaining_area);
         }
     }
 
@@ -143,6 +176,19 @@ impl<'a> Addresses<'a> {
 
     pub fn toggle_mode(&mut self) {
         self.is_list_mode = !self.is_list_mode;
+    }
+}
+
+// appends column onto destination, padded with spaces
+fn pad_column_into(column: &str, destination: &mut String) {
+    destination.push_str(column);
+    let mut pad = TAB_WIDTH - column.chars().count() % TAB_WIDTH;
+    if pad == 0 {
+        pad = TAB_WIDTH; // add tab width
+    }
+    while pad > 0 {
+        destination.push(' ');
+        pad -= 1;
     }
 }
 
