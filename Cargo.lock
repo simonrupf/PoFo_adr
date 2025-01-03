@@ -427,7 +427,7 @@ checksum = "57c0d7b74b563b49d38dae00a0c37d4d6de9b432382b2892f0574ddcae73fd0a"
 
 [[package]]
 name = "pofo_adr"
-version = "0.2.9"
+version = "0.3.0"
 dependencies = [
  "chrono",
  "codepage-437",

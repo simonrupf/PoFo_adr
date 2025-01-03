@@ -1,6 +1,14 @@
 Change Log of Atari Portfolio address file reader
 =================================================
 
+Version 0.3.0 / 2025-01-03
+--------------------------
+- more closely mimic Portfolio by:
+  - inset border titles by one
+  - add a border between title and address in page mode
+  - fix display of tabs to width of 8 characters
+- display index of selected address when in page mode (deviating from Portfolio)
+
 Version 0.2.9 / 2025-01-02
 --------------------------
 - bumped chrono from 0.4.38 to 0.4.39

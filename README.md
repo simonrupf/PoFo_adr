@@ -48,69 +48,73 @@ lint            Run fmt & clippy on the code to come up with improvements.
 help            Displays these usage instructions.
 $ make release
 cargo build --release
-   Compiling libc v0.2.151
-   Compiling ryu v1.0.5
-   Compiling autocfg v1.1.0
-   Compiling proc-macro2 v1.0.71
-   Compiling cfg-if v1.0.0
-   Compiling byteorder v1.3.4
-   Compiling memchr v2.3.3
-   Compiling unicode-ident v1.0.12
-   Compiling serde v1.0.116
-   Compiling rustversion v1.0.14
-   Compiling quote v1.0.33
-   Compiling log v0.4.11
-   Compiling version_check v0.9.4
-   Compiling regex-automata v0.1.9
-   Compiling lock_api v0.4.11
-   Compiling ahash v0.8.7
-   Compiling lazy_static v1.4.0
-   Compiling cfg-if v0.1.10
-   Compiling parking_lot_core v0.9.9
+   Compiling proc-macro2 v1.0.92
+   Compiling autocfg v1.4.0
+   Compiling libc v0.2.169
+   Compiling unicode-ident v1.0.14
+   Compiling rustversion v1.0.19
+   Compiling serde v1.0.217
    Compiling signal-hook v0.3.17
-   Compiling csv-core v0.1.10
-   Compiling signal-hook-registry v1.4.1
-   Compiling once_cell v1.19.0
-   Compiling syn v1.0.109
-   Compiling itoa v0.4.6
-   Compiling scopeguard v1.1.0
-   Compiling smallvec v1.11.2
-   Compiling zerocopy v0.7.32
-   Compiling mio v0.8.10
-   Compiling syn v2.0.43
-   Compiling num-traits v0.2.12
-   Compiling heck v0.4.1
-   Compiling allocator-api2 v0.2.16
-   Compiling paste v1.0.14
-   Compiling hashbrown v0.14.3
-   Compiling signal-hook-mio v0.2.3
-   Compiling parking_lot v0.12.1
-   Compiling bstr v0.2.13
-   Compiling castaway v0.2.2
-   Compiling either v1.9.0
-   Compiling csv v1.1.3
+   Compiling fnv v1.0.7
+   Compiling ident_case v1.0.1
+   Compiling memchr v2.7.4
+   Compiling cfg-if v1.0.0
+   Compiling strsim v0.11.1
+   Compiling parking_lot_core v0.9.10
+   Compiling scopeguard v1.2.0
+   Compiling rustix v0.38.42
+   Compiling lock_api v0.4.12
+   Compiling smallvec v1.13.2
+   Compiling csv-core v0.1.11
+   Compiling ryu v1.0.18
+   Compiling log v0.4.22
+   Compiling quote v1.0.38
+   Compiling itoa v1.0.14
+   Compiling num-traits v0.2.19
+   Compiling diff v0.1.13
+   Compiling either v1.13.0
+   Compiling syn v2.0.94
+   Compiling signal-hook-registry v1.4.2
+   Compiling mio v1.0.3
+   Compiling allocator-api2 v0.2.21
+   Compiling linux-raw-sys v0.4.14
+   Compiling foldhash v0.1.4
+   Compiling heck v0.5.0
+   Compiling equivalent v1.0.1
+   Compiling paste v1.0.15
+   Compiling yansi v1.0.1
+   Compiling bitflags v2.6.0
+   Compiling hashbrown v0.15.2
+   Compiling signal-hook-mio v0.2.4
+   Compiling parking_lot v0.12.3
+   Compiling itertools v0.13.0
+   Compiling pretty_assertions v1.4.1
+   Compiling castaway v0.2.3
    Compiling static_assertions v1.1.0
-   Compiling itoa v1.0.10
-   Compiling bitflags v2.4.2
-   Compiling crossterm v0.27.0
-   Compiling codepage-437 v0.1.0
-   Compiling compact_str v0.7.1
-   Compiling itertools v0.12.1
-   Compiling strum_macros v0.26.1
-   Compiling lru v0.12.2
-   Compiling unicode-width v0.1.8
-   Compiling indoc v2.0.4
-   Compiling iana-time-zone v0.1.58
-   Compiling unicode-segmentation v1.10.1
+   Compiling unicode-segmentation v1.12.0
+   Compiling indoc v2.0.5
+   Compiling unicode-width v0.1.14
+   Compiling compact_str v0.8.1
+   Compiling crossterm v0.28.1
+   Compiling lru v0.12.5
    Compiling cassowary v0.3.0
-   Compiling chrono v0.4.33
-   Compiling strum v0.26.1
-   Compiling stability v0.1.1
-   Compiling ratatui v0.26.0
-   Compiling pofo_adr v0.2.2 (Projects/PoFo_adr)
-    Finished release [optimized] target(s) in 42.98s
+   Compiling unicode-width v0.2.0
+   Compiling csv v1.3.1
+   Compiling iana-time-zone v0.1.61
+   Compiling unicode-truncate v1.1.0
+   Compiling chrono v0.4.39
+   Compiling codepage-437 v0.1.0
+   Compiling darling_core v0.20.10
+   Compiling strum_macros v0.26.4
+   Compiling darling_macro v0.20.10
+   Compiling darling v0.20.10
+   Compiling instability v0.3.5
+   Compiling strum v0.26.3
+   Compiling ratatui v0.29.0
+   Compiling pofo_adr v0.3.0 (Projects/PoFo_adr)
+    Finished `release` profile [optimized] target(s) in 22.56s
 $ target/release/pofo_adr examples/ez-ref.adr
-╔ examples/ez-ref.adr ═══════════════════════════════════════════════════ #122 ╗
+╔═ examples/ez-ref.adr ═════════════════════════════════════════════════ #122 ═╗
 ║ ABACUS BOOKS  (616)698-0330                                                  ║
 ║ AC Adapter [HPC-401]                                                         ║
 ║ Address Book                                                                 ║
@@ -133,5 +137,30 @@ $ target/release/pofo_adr examples/ez-ref.adr
 ║ byte                                                                         ║
 ║ cable                                                                        ║
 ║ Calculator                                                                   ║
-╚ Sun 20 Sep 20 15:46 ═════════════════════════════════════════════════════════╝
+╚═ Fri 03 Jan 25 08:09 ════════════════════════════════════════════════════════╝
+# selecting "Address Book" page with the down cursor key and hitting Enter:
+╔═ examples/ez-ref.adr ════════════════════════════════════════════ 3 of #122 ═╗
+║ Address Book                                                                 ║
+║──────────────────────────────────────────────────────────────────────────────║
+║ A database application provided in the                                       ║
+║ ROM of the Portfolio. Access is                                              ║
+║ obtained by holding the Atari key and                                        ║
+║ pressing the A key.                                                          ║
+║ The autodialer will provide two                                              ║
+║ options of each phone number if the                                          ║
+║ entry is made on the top line as                                             ║
+║ follows:                                                                     ║
+║ Artisan Software  (209)239-1552 [main]                                       ║
+║                                                                              ║
+║                                                                              ║
+║                                                                              ║
+║                                                                              ║
+║                                                                              ║
+║                                                                              ║
+║                                                                              ║
+║                                                                              ║
+║                                                                              ║
+║                                                                              ║
+║                                                                              ║
+╚═ Fri 03 Jan 25 08:11 ════════════════════════════════════════════════════════╝
 ```
