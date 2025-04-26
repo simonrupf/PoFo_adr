@@ -213,8 +213,8 @@ fn main() {
         let dos_content = match read(&path) {
             Ok(content) => content,
             Err(error) => {
-                eprintln!("Error reading file {}", path);
-                eprintln!("{}", error);
+                eprintln!("Error reading file {path}");
+                eprintln!("{error}");
                 exit(254);
             }
         };
