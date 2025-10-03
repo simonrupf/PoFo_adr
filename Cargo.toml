@@ -31,7 +31,7 @@ extended-description-file = "README.md"
 section = "contrib/utils"
 priority = "optional"
 assets = [
-    ["target/x86_64-unknown-linux-musl/release/pofo_adr", "usr/bin/", "755" ],
+    ["target/release/pofo_adr", "usr/bin/", "755" ],
     ["CHANGELOG.md", "usr/share/doc/pofo_adr/", "644" ],
     ["LICENSE.md", "usr/share/doc/pofo_adr/", "644" ],
     ["README.md", "usr/share/doc/pofo_adr/", "644" ],
