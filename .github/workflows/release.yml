@@ -10,7 +10,7 @@ jobs:
   create-release:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: taiki-e/create-gh-release-action@v1
         with:
           changelog: CHANGELOG.md
@@ -29,7 +29,7 @@ jobs:
             os: windows-latest
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - run: |
           rustup toolchain install ${RUST_VERSION} --profile minimal --no-self-update
           rustup default ${RUST_VERSION}
@@ -47,7 +47,7 @@ jobs:
   publish-packages:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - run: |
           sudo apt-get install -y musl-dev musl-tools
           rustup toolchain install ${RUST_VERSION} --profile minimal --no-self-update
