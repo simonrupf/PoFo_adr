@@ -1,22 +1,22 @@
 [package]
 name = "pofo_adr"
 description = "command line reader for the Atari Portfolio address file format."
-version = "0.3.5"
+version = "0.4.0"
 authors = ["Simon Rupf <simon@rupf.net>"]
-edition = "2021"
+edition = "2024"
 license = "GPL-3.0"
 repository = "https://github.com/simonrupf/convert2json"
 keywords = ["cli", "atari"]
 categories = ["command-line-utilities", "encoding"]
-rust-version = "1.74"
+rust-version = "1.91"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 chrono = "0.4.44"
 codepage-437 = "0.1.0"
-crossterm = { version = "0.28.1", default-features = false, features = ["windows", "events"] } # pin to the version depended on by ratatui
-ratatui = { version = "0.29.0", default-features = false, features = ['crossterm'] }
+crossterm = { version = "0.29.0", default-features = false, features = ["windows", "events"] } # pin to the version depended on by ratatui
+ratatui = { version = "0.30.0", default-features = false, features = ['crossterm'] }
 
 [profile.release]
 opt-level = 'z'  # Optimize for size.

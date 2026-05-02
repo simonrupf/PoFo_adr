@@ -1,6 +1,14 @@
 Change Log of Atari Portfolio address file reader
 =================================================
 
+Version 0.4.0 / 2026-05-02
+--------------------------
+- bumped rust version to 1.91 & edition 2024
+- bumped ratatui from 0.29.0 to 0.30.0
+- bumped crossterm from 0.28.1 to 0.29.0
+- updated dependencies
+- enable and address pedantic clippy lints
+
 Version 0.3.5 / 2026-03-04
 --------------------------
 - bumped chrono from 0.4.43 to 0.4.44

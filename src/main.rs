@@ -10,17 +10,17 @@ use crossterm::{
 };
 
 use ratatui::{
+    Frame, Terminal,
     backend::CrosstermBackend,
     layout::Rect,
     style::{Color, Style},
     text::{Span, Text},
     widgets::{Block, BorderType, Borders, List, ListItem, ListState, Padding, Paragraph},
-    Frame, Terminal,
 };
 
 const TAB_WIDTH: usize = 8;
 
-struct Addresses<'a> {
+struct Database<'a> {
     path: String,
     addresses: Vec<Paragraph<'a>>,
     headers: Vec<ListItem<'a>>,
@@ -28,8 +28,8 @@ struct Addresses<'a> {
     state: ListState,
 }
 
-impl<'a> Addresses<'a> {
-    pub fn new(path: String, content: &'a str) -> Addresses<'a> {
+impl<'a> Database<'a> {
+    pub fn new(path: String, content: &'a str) -> Database<'a> {
         // content can be zero terminated and ends in a final LF+LF to be trimmed, before we split on that pattern
         let block = Block::new()
             .borders(Borders::TOP)
@@ -62,7 +62,7 @@ impl<'a> Addresses<'a> {
             })
             .collect();
         let state = ListState::default();
-        Addresses {
+        Database {
             path,
             addresses,
             headers,
@@ -88,7 +88,7 @@ impl<'a> Addresses<'a> {
             };
             format!(" {index} of #{total} ")
         };
-        let counter_len = counter.len() as u16;
+        let counter_len = u16::try_from(counter.len()).unwrap_or(u16::MAX);
         let counter_size = Rect::new(
             area.x + area.width - counter_len - 2,
             area.y,
@@ -101,7 +101,7 @@ impl<'a> Addresses<'a> {
         let datetime_size = Rect::new(
             area.x + 2,
             area.y + area.height - 1,
-            datetime.len() as u16,
+            u16::try_from(datetime.len()).unwrap_or(20), // length for " Fri 03 Jan 25 08:09 "
             1,
         );
         let datetime_box = Paragraph::new(Span::raw(datetime));
@@ -122,12 +122,11 @@ impl<'a> Addresses<'a> {
                 .highlight_style(Style::default().fg(Color::Black).bg(Color::White));
             f.render_stateful_widget(items, inner_area, &mut self.state);
         } else {
-            let index = match self.state.selected() {
-                Some(i) => i,
-                None => {
-                    self.state.select(Some(0));
-                    0
-                }
+            let index = if let Some(i) = self.state.selected() {
+                i
+            } else {
+                self.state.select(Some(0));
+                0
             };
             let header = List::new([self.headers[index].clone()]);
             f.render_widget(header, inner_area.rows().next().unwrap());
@@ -202,12 +201,9 @@ fn main() {
 
     // closure to drop parsing state is when done
     {
-        let path = match args().nth(1) {
-            Some(path) => path,
-            None => {
-                eprintln!("Missing argument: no path to file given");
-                exit(255);
-            }
+        let Some(path) = args().nth(1) else {
+            eprintln!("Missing argument: no path to file given");
+            exit(255);
         };
 
         let dos_content = match read(&path) {
@@ -220,7 +216,7 @@ fn main() {
         };
         utf8_content =
             String::borrow_from_cp437(&dos_content, &CP437_CONTROL).replace("\r\n", "\n");
-        addresses = Addresses::new(path, &utf8_content);
+        addresses = Database::new(path, &utf8_content);
     }
 
     enable_raw_mode().unwrap(); // prevent key presses reaching stdout
